@@ -2,4 +2,4 @@ Title: Home
 
 ----
 
-Text: hello world
+Text: A different point of view

@@ -1,4 +1,4 @@
-title: Page
+title: Contact
 
 columns:
   left:
@@ -20,5 +20,15 @@ columns:
             type: text
           text:
             type: textarea
-          prices:
-            type: textarea
+          email:
+            label: Email
+            type: email
+          instaUrl:
+            label: instagram
+            type: url
+          twitterUrl:
+            label: twitter
+            type: url
+          facebookUrl:
+            label: facebook
+            type: url
