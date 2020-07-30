@@ -13,7 +13,7 @@ columns:
         type: files
         accept:
           mime: image/*
-          maxsize: 100000000
+          maxsize: 100000000000
 
 
   right:
