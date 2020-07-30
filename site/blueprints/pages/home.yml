@@ -1,4 +1,4 @@
-title: Page
+title: home
 
 columns:
   left:
@@ -8,14 +8,14 @@ columns:
         label: "Icon"
         type: files
         max: 1
-      gallery:
-        label: "Selected images for gallery"
+      video:
+        label: "Selected video for homepage"
         type: files
-        max: 20
-    sections:
-      uploads:
-        headline: "Upload images here"
-        type: files
+        accept:
+          mime: image/*
+          maxsize: 100000000
+
+
   right:
     width: 1/2
     sections:

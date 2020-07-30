@@ -2,6 +2,18 @@ Title: Weddings
 
 ----
 
+Menuicon:
+
+- weddings-icon.svg
+
+----
+
+Gallery:
+
+- field-weddings.jpg
+
+----
+
 Heading: Weddings
 
 ----
@@ -17,3 +29,7 @@ Drone Air Package: Includes before and after the ceremony, the arrival of the we
 Unedited footage provided on an external drive on the day: £400 + VAT
 
 Edited footage provided via private online link: £550 + VAT
+
+----
+
+Icon: 

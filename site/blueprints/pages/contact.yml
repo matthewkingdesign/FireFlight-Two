@@ -3,13 +3,19 @@ title: Contact
 columns:
   left:
     width: 1/2
-    sections:
-      gallery:
+    fields:
+      menuicon:
+        label: "Icon"
         type: files
-        layout: cards
-        image:
-          cover: true
-          ration: 3/4
+        max: 1
+      gallery:
+        label: "Selected images for gallery"
+        type: files
+        max: 20
+    sections:
+      uploads:
+        headline: "Upload images here"
+        type: files
   right:
     width: 1/2
     sections:

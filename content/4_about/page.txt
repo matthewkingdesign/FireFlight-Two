@@ -2,6 +2,18 @@ Title: About
 
 ----
 
+Menuicon:
+
+- about-icon.svg
+
+----
+
+Gallery:
+
+- sunset-about.jpg
+
+----
+
 Heading: About
 
 ----
@@ -15,3 +27,7 @@ Our experience in both operating the equipment and also traditional moving and s
 ----
 
 Prices: 
+
+----
+
+Icon: 

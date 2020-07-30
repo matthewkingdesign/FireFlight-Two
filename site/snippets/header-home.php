@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="container">
-      <nav class="menu">
+      <!-- <nav class="menu">
         <div class="menu-item-holder">
           <?php foreach($site->children()->listed() as $subpage): ?>
             <a class="menu-item" href="<?= $subpage->url() ?>">
@@ -27,4 +27,4 @@
               <?php endforeach ?>
           <?php endforeach ?>
         </div>
-      </nav>
+      </nav> -->

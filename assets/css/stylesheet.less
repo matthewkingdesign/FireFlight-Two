@@ -50,9 +50,13 @@ table {
 /************* FONTS *************/
 /*
 USING FONTS FROM ADOBE
-Big Calson
-Skolar
-Brandon Grotesque
+Menu Items and small all caps letters:
+- Agenda
+Big Titles
+- Sofia Pro
+Body Copy
+- Proxima Nova
+
 */
 /************* SOME RESETS *************/
 *,
@@ -74,13 +78,116 @@ a{
 p:not(:last-of-type){
 	margin-bottom: 1rem;
 }
-@blueish-colour: #40bfef;
-@whiteish-colour: #fcfcfc;
-@greenish-colour: #96f288;
-@terecotaish-colour: #f54e42;
+@dark-grey: #05080D;
+@light-grey: #FAF9F8;
+@light-orange: #F07F2C;
+@dark-orange: #EA5B0C;
 
+/* GLOBAL */
 .container{
 	height: 100vh;
 	width: 100vw;
-	background-color: @terecotaish-colour;
+	position: relative;
+	display: block;
+}
+/*HOME TEMPLATE*/
+.content-home{
+	.logo-home{
+
+	}
+	.content-copy-home{
+		
+	}
+}
+/* PAGE TEMPLATE */
+.content{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.content-left{
+	width: 60%;
+	float: left;
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	img{
+		display: block;
+		max-width: 100%;
+
+	}
+
+}
+.content-right{
+	width: 40%;
+	float: right;
+	display: block;
+	height: 100%;
+	background-color: @light-orange;
+	color: @light-grey;
+	.content-title{
+		font-family: sofia-pro, sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		font-size: 3em;
+	}
+	.content-right p{
+		font-family: proxima-nova, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1em;
+	}
+}
+/***** HOVER *****/
+// .menu{
+// 	background: @light-grey;
+// 	height: 100%;
+// 	width: 2%;
+//
+//
+// }
+// OLD MENU
+.menu{
+	background: @light-grey;
+	width: 3%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	float: left;
+	clear: both;
+	transition: 0.4s;
+	display: block;
+	z-index: 4;
+	&:hover{
+		width: 10%;
+	}
+	.menu-item-holder{
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		opacity: 1;
+		// &:hover{
+		// 	opacity: 1;
+		// }
+		.menu-item{
+			color: @dark-grey;
+			display: block;
+			font-family: agenda, sans-serif;
+			font-weight: 700;
+			font-style: normal;
+			margin: 20px;
+			width: 100px;
+			opacity: 0;
+		}
+		.menu-icon{
+			width: 30px;
+			position: relative;
+			left: 0;
+			margin: 0 0 0 10px;
+			opacity: 1;
+
+		}
+	}
 }

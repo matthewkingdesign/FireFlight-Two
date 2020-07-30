@@ -2,6 +2,18 @@ Title: Inspection
 
 ----
 
+Menuicon:
+
+- inspection-icon.svg
+
+----
+
+Gallery:
+
+- roof-inspection.jpg
+
+----
+
 Heading: Inspection
 
 ----
@@ -15,3 +27,7 @@ Prices:
 Half day: £600 + VAT
 
 Full day: £1000 + VAT
+
+----
+
+Icon: - inspection-icon.svg

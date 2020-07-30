@@ -2,6 +2,18 @@ Title: Estate Agents
 
 ----
 
+Menuicon:
+
+- estate-agents-icon.svg
+
+----
+
+Gallery:
+
+- estate-agents.jpg
+
+----
+
 Heading: Estate Agents
 
 ----
@@ -15,3 +27,7 @@ Prices:
 1 Property - £250 + VAT per property
 2 - 3 Properties - £200 + VAT per property
 4+ Properties £150 + VAT per property
+
+----
+
+Icon: 

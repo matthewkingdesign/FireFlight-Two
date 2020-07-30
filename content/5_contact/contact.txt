@@ -2,6 +2,18 @@ Title: Contact
 
 ----
 
+Menuicon:
+
+- contact-icon.svg
+
+----
+
+Gallery:
+
+- cinema-contact.jpg
+
+----
+
 Heading: Contact
 
 ----
@@ -23,3 +35,7 @@ Twitterurl:
 ----
 
 Facebookurl: 
+
+----
+
+Icon: - contact-icon.svg

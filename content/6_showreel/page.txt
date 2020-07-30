@@ -2,8 +2,26 @@ Title: Showreel
 
 ----
 
+Menuicon:
+
+- showreel-icon.svg
+
+----
+
+Gallery: 
+
+----
+
+Heading: Showreel
+
+----
+
 Text: 
 
 ----
 
 Prices: 
+
+----
+
+Icon: 
