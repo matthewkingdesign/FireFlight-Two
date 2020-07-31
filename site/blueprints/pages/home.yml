@@ -12,7 +12,6 @@ columns:
         label: "Selected video for homepage"
         type: files
         accept:
-          mime: image/*
           maxsize: 100000000000
 
 
