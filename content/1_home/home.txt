@@ -10,6 +10,7 @@ Menuicon:
 
 Logo:
 
+- logo-light.svg
 - logo-dark.svg
 
 ----

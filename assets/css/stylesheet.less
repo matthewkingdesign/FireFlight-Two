@@ -106,12 +106,16 @@ p:not(:last-of-type){
 			font-family: sofia-pro, sans-serif;
 			font-weight: 700;
 			font-style: normal;
-			font-size: 8em;
-			letter-spacing: -9px;
+			font-size: 12em;
+			letter-spacing: -10px;
+			line-height: .8em;
+			color: @light-grey;
 		}
 	}
 }
-.homepage-fullscreen-meun{
+
+/*FULLSCREEN MENU*/
+.homepage-fullscreen-menu{
 	background: @light-grey;
 	height: 100vh;
 	width: 100vw;
@@ -119,11 +123,35 @@ p:not(:last-of-type){
 	top: 0;
 	left: 0;
 	position: relative;
+	.homepage-menu-item-holder{
+		width: 100%;
+		margin: 0 auto;
+		background: red;
+		display: grid;
+		grid-template-columns: repeat(3, 100px);
+		align-items: center;
+		justify-content: center;
+		grid-gap: 50px;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
 
+	}
 	.homepage-menu-icon{
-		width: 30px;
+		width: 70px;
+
+	}
+	.homepage-menu-item{
+		opacity: 0;
+	}
+	.logo-fullscreen-menu{
+		width: 200px;
 	}
 }
+.homepage-menu-img-holder{
+
+}
+ .homepage-menu-item-holder > div.homepage-menu-img-holder:first-of-type img { display: none; }
 
 /* PAGE TEMPLATE */
 .content{
