@@ -8,12 +8,9 @@ columns:
         label: "Icon"
         type: files
         max: 1
-      video:
-        label: "Selected video for homepage"
+      logo:
+        label: "logo for homepage"
         type: files
-        accept:
-          maxsize: 100000000000
-
 
   right:
     width: 1/2

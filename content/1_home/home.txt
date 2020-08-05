@@ -1,0 +1,40 @@
+Title: Home
+
+----
+
+Menuicon:
+
+- f-icon.svg
+
+----
+
+Logo:
+
+- logo-dark.svg
+
+----
+
+Heading: 
+
+----
+
+Text:
+
+A different
+point of view
+
+----
+
+Prices: 
+
+----
+
+Image: - logo-dark.svg
+
+----
+
+Video: - logo-dark.svg
+
+----
+
+Gallery: 

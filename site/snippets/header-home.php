@@ -1,4 +1,4 @@
-<!-- This is the header file. loads style sheets etc and just the menu as for JANES WEBSITE that is the only thing repeated through out all the site.  -->
+<!-- This is the header file for the homepage. loads style sheets etc and just the menu as for FIRE FLIGHT DRONES that is the only thing repeated through out all the site.  -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,17 +14,3 @@
   </head>
   <body>
     <div class="container">
-      <!-- <nav class="menu">
-        <div class="menu-item-holder">
-          <?php foreach($site->children()->listed() as $subpage): ?>
-            <a class="menu-item" href="<?= $subpage->url() ?>">
-              <?= $subpage->title() ?>
-            </a>
-            <?php
-              $images =  $subpage->menuicon()->toFiles();
-              foreach($images as $image): ?>
-                <a href="<?= $subpage->url() ?>"><img class="menu-icon" src="<?= $image->url() ?>" alt=""></a>
-              <?php endforeach ?>
-          <?php endforeach ?>
-        </div>
-      </nav> -->
