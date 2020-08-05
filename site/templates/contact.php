@@ -8,6 +8,7 @@
       <img src="<?= $image->url() ?>" alt="">
     <?php endforeach ?>
 
+
   </div>
   <div class="content-right">
     <h1 class="content-title"><?= $page->title() ?></h1>

@@ -12,6 +12,18 @@ columns:
         label: "Selected images for gallery"
         type: files
         max: 20
+      twitterIcon:
+        label: "Icon for twitter"
+        type: files
+        max: 1
+      instaIcon:
+        label: "Icon for Instagram"
+        type: files
+        max: 1
+      facebookIcon:
+        label: "Icon for Facebook"
+        type: files
+        max: 1
     sections:
       uploads:
         headline: "Upload images here"

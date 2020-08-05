@@ -25,6 +25,32 @@
               foreach($images as $image): ?>
                 <a href="<?= $subpage->url() ?>"><img class="menu-icon" src="<?= $image->url() ?>" alt=""></a>
               <?php endforeach ?>
+              <!--SOCIALS -->
+              <div class="social-media-links">
+                <?php
+                  $images =  $subpage->twitterIcon()->toFiles();
+                  foreach($images as $image): ?>
+                    <a href="<?=  $subpage->twitterUrl() ?>"><img class="social-menu-icon" src="<?= $image->url() ?>" alt=""></a>
+                <?php endforeach ?>
+
+                <?php
+                  $images =  $subpage->instaIcon()->toFiles();
+                  foreach($images as $image): ?>
+                    <a href="<?=  $subpage->instaUrl() ?>"><img class="social-menu-icon" src="<?= $image->url() ?>" alt=""></a>
+                <?php endforeach ?>
+
+                <?php
+                  $images =  $subpage->facebookIcon()->toFiles();
+                  foreach($images as $image): ?>
+                    <a href="<?=  $subpage->facebookUrl() ?>"><img class="social-menu-icon" src="<?= $image->url() ?>" alt=""></a>
+                <?php endforeach ?>
+              </div>
+
+
+
+
           <?php endforeach ?>
+
+
         </div>
       </nav>
