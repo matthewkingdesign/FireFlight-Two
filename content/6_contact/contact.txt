@@ -16,19 +16,19 @@ Gallery:
 
 Twittericon:
 
-- twiiter.svg
+- twitter-fill.svg
 
 ----
 
 Instaicon:
 
-- insta.svg
+- insta-fill.svg
 
 ----
 
 Facebookicon:
 
-- facebook.svg
+- facebook-fill.svg
 
 ----
 
@@ -44,7 +44,7 @@ Email: support@fireflightdrones.com
 
 ----
 
-Instaurl: 
+Instaurl: https://www.instagram.com/
 
 ----
 
@@ -52,7 +52,7 @@ Twitterurl: https://twitter.com/?lang=en
 
 ----
 
-Facebookurl: 
+Facebookurl: https://en-gb.facebook.com/
 
 ----
 

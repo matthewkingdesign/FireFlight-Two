@@ -4,7 +4,7 @@ Title: About
 
 Menuicon:
 
-- about-icon.svg
+- about-page-icon.svg
 
 ----
 

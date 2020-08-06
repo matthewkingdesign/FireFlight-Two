@@ -12,6 +12,7 @@ Logo:
 
 - logo-light.svg
 - logo-dark.svg
+- logo-text.svg
 
 ----
 

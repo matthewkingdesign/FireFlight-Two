@@ -16,24 +16,22 @@
 <!-- FULLSCREEN MENU -->
 <div class="homepage-fullscreen-menu">
   <nav class="homepage-menu">
+    <!--LOGO -->
+    <?php if($image = $page->image('logo-dark.svg')): ?>
+      <img class="logo-fullscreen-menu" src="<?= $image->url() ?>" alt="">
+    <?php endif ?>
     <div class="homepage-menu-item-holder">
-      <!--LOGO -->
-      <?php if($image = $page->image('logo-dark.svg')): ?>
-        <img class="logo-fullscreen-menu" src="<?= $image->url() ?>" alt="">
-      <?php endif ?>
-      <!--LINK TEXT -->
+      <!--MENU IMAGES AND LINKS -->
       <?php foreach($site->children()->listed() as $subpage): ?>
-        <a class="homepage-menu-item" href="<?= $subpage->url() ?>">
-          <?= $subpage->title() ?>
-        </a>
-        <!--IMG LINKS AND HOLDER -->
-        <div class="homepage-menu-img-holder">
+        <a class="homepage-menu-link"  href="<?= $subpage->url() ?>">
+          <span class="homepage-menu-item"><?= $subpage->title() ?></span>
           <?php
           $images =  $subpage->menuicon()->toFiles();
           foreach($images as $image): ?>
-            <a class="homepage-menu-icon-link" href="<?= $subpage->url() ?>"><img class="homepage-menu-icon" src="<?= $image->url() ?>" alt=""></a>
+            <img class="homepage-menu-icon" src="<?= $image->url() ?>" alt="">
           <?php endforeach ?>
-        </div>
+        </a>
+
       <?php endforeach ?>
     </div>
   </nav>

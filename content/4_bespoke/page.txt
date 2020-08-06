@@ -4,7 +4,7 @@ Title: Bespoke
 
 Menuicon:
 
-- bespoke-dark.svg
+- bespoke-page-icon.svg
 
 ----
 

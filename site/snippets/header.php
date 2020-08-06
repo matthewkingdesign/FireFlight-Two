@@ -1,4 +1,3 @@
-<!-- This is the header file. loads style sheets etc and just the menu as for JANES WEBSITE that is the only thing repeated through out all the site.  -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,43 +13,44 @@
   </head>
   <body>
     <div class="container">
+      <div class="homepage-links">
+        <?php
+          $homePage = $site->findPageOrDraft('home');
+            if($image = $homePage->image('f-icon.svg')): ?>
+            <a href="<?= $homePage->url() ?>"> <img class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
+        <?php endif ?>
+        <?php
+          if($image = $homePage->image('logo-dark.svg')): ?>
+          <a href="<?= $homePage->url() ?>"> <img id="logo-text" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
+        <?php endif ?>
+      </div>
       <nav class="menu">
         <div class="menu-item-holder">
           <?php foreach($site->children()->listed() as $subpage): ?>
-            <a class="menu-item" href="<?= $subpage->url() ?>">
-              <?= $subpage->title() ?>
-            </a>
-            <?php
-              $images =  $subpage->menuicon()->toFiles();
-              foreach($images as $image): ?>
-                <a href="<?= $subpage->url() ?>"><img class="menu-icon" src="<?= $image->url() ?>" alt=""></a>
+            <a href="<?= $subpage->url() ?>">
+              <span class="menu-item"><?= $subpage->title()->upper() ?></span>
+              <?php
+                $images =  $subpage->menuicon()->toFiles();
+                foreach($images as $image): ?>
+                  <img class="menu-icon" src="<?= $image->url() ?>" alt="">
               <?php endforeach ?>
-              <!--SOCIALS -->
-              <div class="social-media-links">
-                <?php
-                  $images =  $subpage->twitterIcon()->toFiles();
-                  foreach($images as $image): ?>
-                    <a href="<?=  $subpage->twitterUrl() ?>"><img class="social-menu-icon" src="<?= $image->url() ?>" alt=""></a>
-                <?php endforeach ?>
-
-                <?php
-                  $images =  $subpage->instaIcon()->toFiles();
-                  foreach($images as $image): ?>
-                    <a href="<?=  $subpage->instaUrl() ?>"><img class="social-menu-icon" src="<?= $image->url() ?>" alt=""></a>
-                <?php endforeach ?>
-
-                <?php
-                  $images =  $subpage->facebookIcon()->toFiles();
-                  foreach($images as $image): ?>
-                    <a href="<?=  $subpage->facebookUrl() ?>"><img class="social-menu-icon" src="<?= $image->url() ?>" alt=""></a>
-                <?php endforeach ?>
-              </div>
-
-
-
-
+            </a>
           <?php endforeach ?>
+        </div>
 
-
+        <div class="socials">
+          <?php
+            $contactPage = $site->findPageOrDraft('contact');
+             if($image = $contactPage->image('twitter-fill.svg')): ?>
+             <a href="<?= $contactPage->twitterUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
+          <?php
+            if($image = $contactPage->image('insta-fill.svg')): ?>
+            <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
+          <?php
+            if($image = $contactPage->image('facebook-fill.svg')): ?>
+            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
         </div>
       </nav>
