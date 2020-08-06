@@ -4,7 +4,13 @@ Title: Contact
 
 Menuicon:
 
-- contact-icon.svg
+- contact-icon-dark.svg
+
+----
+
+Menuiconlight:
+
+- contact-icon-light.svg
 
 ----
 

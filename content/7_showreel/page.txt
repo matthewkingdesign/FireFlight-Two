@@ -4,7 +4,13 @@ Title: Showreel
 
 Menuicon:
 
-- showreel-icon.svg
+- showreel-icon-dark.svg
+
+----
+
+Menuiconlight:
+
+- showreel-icon-light.svg
 
 ----
 

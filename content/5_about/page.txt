@@ -4,7 +4,13 @@ Title: About
 
 Menuicon:
 
-- about-page-icon.svg
+- about-icon-dark.svg
+
+----
+
+Menuiconlight:
+
+- about-icon-light.svg
 
 ----
 

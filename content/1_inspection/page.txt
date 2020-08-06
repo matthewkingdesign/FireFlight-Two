@@ -4,7 +4,13 @@ Title: Inspection
 
 Menuicon:
 
-- inspection-icon.svg
+- inspection-icon-dark.svg
+
+----
+
+Menuiconlight:
+
+- inspection-icon-light.svg
 
 ----
 

@@ -4,7 +4,13 @@ Title: Bespoke
 
 Menuicon:
 
-- bespoke-page-icon.svg
+- bespoke-icon-dark.svg
+
+----
+
+Menuiconlight:
+
+- bespoke-icon-light.svg
 
 ----
 

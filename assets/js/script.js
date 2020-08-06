@@ -18,3 +18,13 @@ gsap.from('.content-copy-home',{
   ease: "circ.in",
   delay: 4.5
 });
+gsap.from('.loading-screen-content',{
+  opacity: 0,
+  duration: 1,
+  ease: "circ.in"
+});
+gsap.to('.loading-screen',{
+  opacity:0,
+  duration: 1,
+  delay: 3
+});

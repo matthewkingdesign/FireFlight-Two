@@ -8,6 +8,10 @@ columns:
         label: "Icon"
         type: files
         max: 1
+      menuiconlight:
+        label: "Light Icon"
+        type: files
+        max: 1
       gallery:
         label: "Selected images for gallery"
         type: files

@@ -4,7 +4,13 @@ Title: Weddings
 
 Menuicon:
 
-- weddings-icon.svg
+- weddings-icon-dark.svg
+
+----
+
+Menuiconlight:
+
+- weddings-icon-light.svg
 
 ----
 

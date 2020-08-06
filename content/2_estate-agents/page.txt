@@ -4,7 +4,13 @@ Title: Estate Agents
 
 Menuicon:
 
-- estate-agents-icon.svg
+- estate-agents-icon-dark.svg
+
+----
+
+Menuiconlight:
+
+- estate-agents-icon-light.svg
 
 ----
 
