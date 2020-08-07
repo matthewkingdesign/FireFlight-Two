@@ -17,7 +17,7 @@
         <?php
           $homePage = $site->findPageOrDraft('home');
             if($image = $homePage->image('f-icon.svg')): ?>
-            <a href="<?= $homePage->url() ?>"> <img class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
+            <a class="homepage-icon-link" href="<?= $homePage->url() ?>"> <img class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
         <?php endif ?>
         <?php
           if($image = $homePage->image('logo-dark.svg')): ?>
