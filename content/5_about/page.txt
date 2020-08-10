@@ -16,7 +16,7 @@ Menuiconlight:
 
 Gallery:
 
-- sunset-about.jpg
+- beach_result.jpg
 
 ----
 

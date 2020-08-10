@@ -17,10 +17,10 @@
         <?php
           $homePage = $site->findPageOrDraft('home');
             if($image = $homePage->image('f-icon.svg')): ?>
-            <a class="homepage-icon-link" href="<?= $homePage->url() ?>"> <img class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
+            <a class="homepage-icon-link" href="<?= $homePage->url() ?>"> <img id="f-icon-home" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
         <?php endif ?>
         <?php
-          if($image = $homePage->image('logo-dark.svg')): ?>
+          if($image = $homePage->image('logo-text.svg')): ?>
           <a href="<?= $homePage->url() ?>"> <img id="logo-text" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
         <?php endif ?>
       </div>
@@ -28,12 +28,13 @@
         <div class="menu-item-holder">
           <?php foreach($site->children()->listed() as $subpage): ?>
             <a href="<?= $subpage->url() ?>">
-              <span class="menu-item"><?= $subpage->title()->upper() ?></span>
+
               <?php
                 $images =  $subpage->menuicon()->toFiles();
                 foreach($images as $image): ?>
                   <img class="menu-icon" src="<?= $image->url() ?>" alt="">
               <?php endforeach ?>
+              <span class="menu-item"><?= $subpage->title()->upper() ?></span>
             </a>
           <?php endforeach ?>
         </div>

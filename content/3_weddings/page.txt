@@ -16,7 +16,7 @@ Menuiconlight:
 
 Gallery:
 
-- field-weddings.jpg
+- ripples_result.jpg
 
 ----
 

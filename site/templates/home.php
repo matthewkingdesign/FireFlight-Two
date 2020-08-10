@@ -33,12 +33,12 @@
       <!--MENU IMAGES AND LINKS -->
       <?php foreach($site->children()->listed() as $subpage): ?>
         <a class="homepage-menu-link"  href="<?= $subpage->url() ?>">
-          <span class="homepage-menu-item"><?= $subpage->title() ?></span>
           <?php
           $images =  $subpage->menuiconlight()->toFiles();
           foreach($images as $image): ?>
             <img class="homepage-menu-icon" src="<?= $image->url() ?>" alt="">
           <?php endforeach ?>
+          <span class="homepage-menu-item"><?= $subpage->title()->upper() ?></span>
         </a>
 
       <?php endforeach ?>

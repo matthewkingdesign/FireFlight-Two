@@ -66,6 +66,7 @@ Body Copy
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
+	transition: 0.3s;
 }
 *::-webkit-scrollbar{
   display: none;
@@ -99,7 +100,7 @@ p:not(:last-of-type){
 	left: 0;
 	position: absolute;
 	z-index: 10;
-	background: @dark-orange;
+	background: @dark-grey;
 	.loading-screen-content{
 		position: absolute;
 		top: 50%;
@@ -135,7 +136,7 @@ p:not(:last-of-type){
 			font-family: sofia-pro, sans-serif;
 			font-weight: 700;
 			font-style: normal;
-			font-size: 12em;
+			font-size: 8em;
 			letter-spacing: -10px;
 			line-height: .8em;
 			color: @light-grey;
@@ -169,10 +170,11 @@ p:not(:last-of-type){
 		width: 100%;
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: repeat(3, 70px);
+		grid-template-columns: repeat(3, 90px);
+
 		justify-items: center;
 		justify-content: center;
-		align-items: center;
+		align-items: top;
 		grid-gap: 150px;
 		position: absolute;
 		top: 50%;
@@ -182,6 +184,11 @@ p:not(:last-of-type){
 		}
 		> a img{
 		width: 70px;
+		transition: 0.5s;
+		}
+		> a img:hover{
+		width: 75px;
+		transition: .3s;
 		}
 		// :nth-child(5) img{
 		// 	width: 70px;
@@ -190,10 +197,22 @@ p:not(:last-of-type){
 			justify-content: center;
 		}
 		.homepage-menu-item{
+			color: @light-grey;
+			text-align: center;
+			display: block;
+			margin: 0 auto;
+			margin-top: 20px;
+			font-family: agenda, sans-serif;
+			font-weight: 700;
+			font-style: normal;
+			letter-spacing: 3px;
 			opacity: 0;
 		}
 	}
-
+	.homepage-menu-link:hover .homepage-menu-item{
+		transition: .5s;
+		opacity: 1;
+	}
 	.logo-fullscreen-menu{
 		width: 200px;
 		margin: 0 auto;
@@ -201,7 +220,30 @@ p:not(:last-of-type){
 		padding-top: 6%;
 	}
 }
-
+#right-inspection{
+	background-color: @light-orange
+}
+#right-estate-agents{
+	background-color: #bed04a ;
+	// #c1ee8f
+}
+#right-weddings{
+	background-color: #d5a871;
+}
+#right-bespoke{
+	background-color: #161c1c;
+}
+#right-about{
+	background-color:@light-grey ;
+	color: @dark-grey;
+	//#373239
+}
+#right-contact{
+	background-color: @light-grey;
+}
+#right-showreel{
+	background-color: @light-grey;
+}
 /* PAGE TEMPLATE */
 .content{
 	display: block;
@@ -210,7 +252,7 @@ p:not(:last-of-type){
 	height: 100%;
 }
 .content-left{
-	width: 60%;
+	width: 70%;
 	float: left;
 	display: block;
 	height: 100%;
@@ -223,10 +265,11 @@ p:not(:last-of-type){
 	}
 	.portrait{
 		max-width: 100%;
+		min-height: 100%;
 	}
 }
 .content-right{
-	width: 40%;
+	width: 30%;
 	float: right;
 	display: block;
 	height: 100%;
@@ -266,16 +309,22 @@ p:not(:last-of-type){
 .homepage-links{
 	top: 10px;
 	left: 10px;
-	position: absolute;
+	position: relative;
 	z-index: 6;
-	height: 40px;
 	.homepage-icon{
-	height: 40px;
+		top: 10px;
+		left:7px;
+		position: absolute;
+	}
+	#f-icon-home{
+		height: 30px;
 	}
 	#logo-text{
 		vertical-align: baseline;
-		background: red;
-		margin-left: -40px;
+		top: 11px;
+		left: 37px;
+		position: absolute;
+		height: 40px;
 		opacity: 0;
 	}
 }
@@ -318,6 +367,9 @@ p:not(:last-of-type){
 			width: 100px;
 			opacity: 0;
 			width: 200px;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 20px;
 
 		}
 		.menu-icon{
@@ -329,6 +381,10 @@ p:not(:last-of-type){
 		}
 	}
 }
+// .menu-icon:hover .menu-item{
+// 	transition: 0.3s;
+// 	opacity: 1;
+// }
 .socials{
 	height: 100px;
 	bottom: 50px;
