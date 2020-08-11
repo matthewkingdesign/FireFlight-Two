@@ -10,11 +10,12 @@
 
   </div>
   <div class="content-right">
-    <div class="content-right-container">
-      <h1 class="content-title"><?= $page->title() ?></h1>
-      <p class="content-copy"><?= $page->text()->kt() ?></p>
-      <p class="content-prices"><?= $page->prices() ?></p>
-    </div>
+
+  </div>
+  <div class="content-right-container">
+    <h1 class="content-title"><?= $page->title() ?></h1>
+    <p class="content-copy"><?= $page->text()->kt() ?></p>
+    <p class="content-prices"><?= $page->prices() ?></p>
   </div>
 </div>
 

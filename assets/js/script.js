@@ -102,7 +102,7 @@ var tl1 = new TimelineLite({ paused: true })
   });
   var tl2 = new TimelineLite({ paused: true})
     tl2.to(menuIcon, 0.2, {
-      height: 50,
+      height: 35,
       x: 50,
       marginTop: 30,
       stagger: 0.1

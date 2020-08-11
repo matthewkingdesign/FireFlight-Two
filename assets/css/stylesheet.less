@@ -122,6 +122,26 @@ p:not(:last-of-type){
 		margin: 0 auto;
 	}
 }
+.vimeo-wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+}
+.vimeo-wrapper iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
 .content-home{
 	.content-home-holder{
 		position: absolute;
@@ -220,23 +240,29 @@ p:not(:last-of-type){
 		padding-top: 6%;
 	}
 }
+
 #right-inspection{
 	background-color: @light-orange
 }
 #right-estate-agents{
-	background-color: #bed04a ;
+	background-color: #14311d;
+	// #bed04a
 	// #c1ee8f
 }
 #right-weddings{
-	background-color: #d5a871;
+	background-color: #012c33;
+	// #d5a871
 }
 #right-bespoke{
 	background-color: #161c1c;
 }
 #right-about{
 	background-color:@light-grey ;
-	color: @dark-grey;
+
 	//#373239
+}
+#right-content-container-about{
+	color: @dark-grey;
 }
 #right-contact{
 	background-color: @light-grey;
@@ -248,55 +274,80 @@ p:not(:last-of-type){
 .content{
 	display: block;
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
 .content-left{
-	width: 70%;
-	float: left;
+	width: 100vw;
 	display: block;
 	height: 100%;
-	overflow: hidden;
+
 	img{
-		display: block;
-	}
-	.landscape{
-		max-height: 100%;
-	}
-	.portrait{
-		max-width: 100%;
 		min-height: 100%;
+		min-width: 1024px;
+
+		/* Set up proportionate scaling */
+		width: 100%;
+		height: auto;
+
+		/* Set up positioning */
+		position: fixed;
+		top: 0;
+		left: 0;
 	}
+	@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.content-left  {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+	// .landscape{
+	//
+	// }
+	// .portrait{
+	// 	// max-width: 100%;
+	// 	// min-height: 100%;
+	// }
 }
 .content-right{
 	width: 30%;
-	float: right;
 	display: block;
 	height: 100%;
-	background-color: @light-orange;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0.7;
+}
+.content-right-container{
+	padding: 30px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 30%;
+	display: block;
+	right: 0;
 	color: @light-grey;
+}
+.content-title{
+	font-family: sofia-pro, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 4em;
+	letter-spacing: -3px;
+	margin-bottom: 30px;
 	position: relative;
-	.content-right-container{
-		padding: 30px;
-		position: absolute;
-		top: 50%;
-		transform: translate(0, -50%);
-	}
-	.content-title{
-		font-family: sofia-pro, sans-serif;
-		font-weight: 700;
-		font-style: normal;
-		font-size: 6em;
-		letter-spacing: -3px;
-		margin-bottom: 30px;
-	}
-	 p {
-		font-family: proxima-nova, sans-serif;
-		font-weight: 400;
-		font-style: normal;
-		font-size: 1em;
-		line-height: 25px;
-	}
+	opacity: 1;
+}
+ p {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1em;
+	line-height: 25px;
+	position: relative;
+	opacity: 1;
+
 }
 /***** HOVER *****/
 // .menu{
@@ -373,7 +424,7 @@ p:not(:last-of-type){
 
 		}
 		.menu-icon{
-			height: 25px;
+			height: 20px;
 			position: relative;
 			left: 0;
 			margin: 0 0 0 18px;
@@ -397,26 +448,7 @@ p:not(:last-of-type){
 		margin: 20px 0 10px 23px;
 	}
 }
-.vimeo-wrapper {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: -1;
-   pointer-events: none;
-   overflow: hidden;
-}
-.vimeo-wrapper iframe {
-   width: 100vw;
-   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-   min-height: 100vh;
-   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
+
 
 
 
