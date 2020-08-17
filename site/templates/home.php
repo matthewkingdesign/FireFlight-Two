@@ -1,4 +1,4 @@
-<?php snippet('header-home') ?>
+<?php snippet('header') ?>
 <div class="content-home">
   <div class="loading-screen">
     <div class="loading-screen-content">
@@ -22,16 +22,16 @@
     <h1 class="content-copy-home"><?= $page->text()->kt() ?></h1>
   </div>
 <!-- FULLSCREEN MENU -->
-<div class="homepage-fullscreen-menu">
-  <nav class="homepage-menu">
+<!-- <div class="homepage-fullscreen-menu">
+  <nav class="homepage-menu"> -->
     <!--LOGO -->
-    <?php if($image = $page->image('logo-light.svg')): ?>
+    <!-- <?php if($image = $page->image('logo-light.svg')): ?>
       <img class="logo-fullscreen-menu" src="<?= $image->url() ?>" alt="">
     <?php endif ?>
     <span id="homepage-subtitle"><?= $page->heading() ?></span>
-    <div class="homepage-menu-item-holder">
+    <div class="homepage-menu-item-holder"> -->
       <!--MENU IMAGES AND LINKS -->
-      <?php foreach($site->children()->listed() as $subpage): ?>
+      <!-- <?php foreach($site->children()->listed() as $subpage): ?>
         <a class="homepage-menu-link"  href="<?= $subpage->url() ?>">
           <?php
           $images =  $subpage->menuiconlight()->toFiles();
@@ -42,7 +42,7 @@
         </a>
 
       <?php endforeach ?>
-    </div>
+    </div> -->
   </nav>
 </div>
 <?php snippet('footer') ?>

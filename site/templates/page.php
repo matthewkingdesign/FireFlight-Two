@@ -16,7 +16,7 @@
   <div id="right-content-container-<?= $page->id() ?>" class="content-right-container">
     <h1 class="content-title"><?= $page->title() ?></h1>
     <p class="content-copy"><?= $page->text()?></p>
-    <p class="content-prices"><?= $page->prices() ?></p>
+    <div class="content-prices"><?= $page->prices()->kt() ?></div>
   </div>
 </div>
 

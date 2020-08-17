@@ -2,16 +2,10 @@ $(document).ready(function(){
   $('.menu-link').click(function(e) {
     e.preventDefault();
     var linkUrl = $(this).attr('href');
-    setTimeout(function(url) { window.location = url; }, 5000, linkUrl);
+    setTimeout(function(url) { window.location = url; }, 3000, linkUrl);
   });
 });
-gsap.from('.menu-icon',{
-  opacity: 0,
-  duration: 0.7,
-  x: -50,
-  stagger: 0.1,
-  ease: "power4.out"
-});
+// Homepage
 gsap.from('.logo-home',{
   opacity: 0,
   duration: 1,
@@ -30,86 +24,88 @@ gsap.from('.loading-screen-content',{
   ease: "circ.in"
 });
 gsap.to('.loading-screen',{
+  display:'none',
   opacity:0,
   duration: 1,
   delay: 5
 });
-gsap.to('.homepage-fullscreen-menu',{
-  opacity:1,
-  duration:1,
-  delay:12
-});
-gsap.to('.menu',  {
-  duration:0.5,
-  width: 66
-});
-gsap.from('.content-title', {
-  duration: 0.5,
-  opacity: 0,
-  x: 600
-});
-gsap.from('.content-copy', {
-  duration: 0.6,
-  opacity: 0,
-  x: 600,
-  delay: 0.1
-});
-gsap.from('.content-prices', {
-  duration: 0.7,
-  opacity: 0,
-  x: 600,
-  delay: 0.2
-});
-
+// gsap.to('.homepage-fullscreen-menu',{
+//   opacity:1,
+//   duration:1,
+//   delay:12
+// });
 // create main timeline
 var masterTl = new TimelineMax({paused:true, onComplete:onComplete});
 
-// create a function returning first timeline
-function firstTl() {
-  var tl = new TimelineMax()
-
-  return tl;
-}
-
-// create a function returning second timeline
-// function secondTl() {
-//   var tl = new TimelineMax()
-//     .fromTo(".menu", 1, {
-//       width:0
-//     }, {
-//       width: 66
-//     }, "+=0.0")
-//   return tl;
-// }
-
-
 // make this all happen on page load
 function init(){
-// add sub timeline to main timeline
-masterTl
-.add(firstTl(), "+=0.0")
-// .add(secondTl(), "+=0.0")
-.play();
+masterTl.play();
 }
-
-
 // Test play reverse
 var select = document.querySelector.bind(document);
-
 // This function will return a node-list of elements
 // It's not used in this example, but I included it in case
 // you were wondering how to select more than one element
 var selectAll = document.querySelectorAll.bind(document);
 // Select our elements
+var buttons = document.getElementsByClassName('menu-link');
+var pricePs = document.getElementsByClassName('content-prices')[0].children
 var menu = select(".menu");
-// var menuLink = select(".menu-link");
 var menuIcons = selectAll(".menu-icon");
 var menuItem = selectAll(".menu-item");
 var menuLogo = select("#logo-text");
-var socials = selectAll(".social-media-icon")
-
+var socials = selectAll(".social-media-icon");
+// on load timeline
+var tlOnLoad = new TimelineLite()
+// Menu bar
+  .from(menuIcons,{
+    opacity: 0,
+    duration: 0.7,
+    x: -50,
+    stagger: 0.1,
+    ease: "power4.out",
+    delay: 2.5
+  }, "-=2")
+  .from(socials, {
+    duration: 0.7,
+    opacity: 0,
+    x: -50,
+    stagger: 0.1
+  }, "-=1")
+  .to(menu,  {
+    duration:0.5,
+    width: 66,
+    ease: "power4.out",
+    delay: 2
+  }, "-=3")
+  .from('.content-right',{
+    duration: 0.5,
+    x: 600,
+    delay: 2
+  }, "-=3")
+  .from('.content-title', {
+    duration: 0.5,
+    opacity: 0,
+    x: 600,
+    delay: 2
+  }, "-=3")
+  .from('.content-copy', {
+    duration: 0.6,
+    opacity: 0,
+    x: 600,
+    delay: 2.1
+  }, "-=3")
+  .from(pricePs, {
+    duration: 0.7,
+    opacity: 0,
+    x: 600,
+    delay: 2.2
+  }, "-=3");
 
 // Create a paused timeline with our tweens
+// On load timelines
+
+
 // Hover timelines
 // menu bar width on hover
 var tl1 = new TimelineLite({ paused: true })
@@ -119,8 +115,8 @@ var tl1 = new TimelineLite({ paused: true })
   // menu bar icons move and grow on hover
   var tl2 = new TimelineLite({ paused: true})
     tl2.to(menuIcons, 0.2, {
-      height: 35,
-      x: 50,
+      height: 32,
+      x: 60,
       marginTop: 10,
       stagger: 0.1
     });
@@ -142,10 +138,11 @@ var tl1 = new TimelineLite({ paused: true })
       stagger: 0.1
     });
   // click timelines
-  var tl6 = new TimelineLite({ paused: true})
-    tl6.to(menu, 0.2, {
-      width: 0
-    });
+  // var tl6 = new TimelineLite({ paused: true})
+  //   tl6.to(menu, 0.2, {
+  //     width: 0,
+  //     x: 0
+  //   });
 
 
 
@@ -168,11 +165,14 @@ function onComplete() {
       tl5.reverse();
      } );
 }
-var buttons = document.getElementsByClassName('menu-link');
 
+// select all the buttons individually
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].onclick = function(){
-    tl6.play();
+    // tl6.play();
+    tlOnLoad.reverse();
+    tl2.reverse();
+    tl3.reverse();
   }
 }
 

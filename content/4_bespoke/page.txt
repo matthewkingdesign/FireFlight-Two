@@ -1,4 +1,4 @@
-Title: Bespoke
+Title: Hire
 
 ----
 
@@ -16,7 +16,7 @@ Menuiconlight:
 
 Gallery:
 
-- many-geese_result.jpg
+- hire-me.jpg
 
 ----
 
@@ -24,8 +24,8 @@ Heading: Bespoke Service
 
 ----
 
-Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam purus nibh, consectetur et ultricies eget, pellentesque ut nisl. Sed sit amet tempus tortor. Phasellus facilisis, ante in egestas porta, libero eros tempor ipsum, non euismod nisi diam eu nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec erat nibh. Morbi mollis orci eu ex varius iaculis. Duis sed sem suscipit, feugiat leo eu, congue mi. Sed feugiat tortor blandit eros ultricies, a blandit mauris hendrerit. Praesent ac ipsum eu velit fringilla rhoncus eu eget eros. Nulla porttitor iaculis massa at dignissim. Etiam ullamcorper venenatis porttitor. Etiam id pellentesque orci.
+Text: We are always interested in new ways of applying our drones to your projects. If you have a specific project in mind that doesn’t fall under one of our other categories, please don’t hesitate to get in touch to discuss your ideas with our team.
 
 ----
 
-Prices: £1000000000
+Prices: 
