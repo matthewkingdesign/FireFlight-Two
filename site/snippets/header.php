@@ -27,8 +27,7 @@
       <nav class="menu">
         <div class="menu-item-holder">
           <?php foreach($site->children()->listed() as $subpage): ?>
-            <a href="<?= $subpage->url() ?>">
-
+            <a class="menu-link" href="<?= $subpage->url() ?>">
               <?php
                 $images =  $subpage->menuicon()->toFiles();
                 foreach($images as $image): ?>

@@ -5,61 +5,9 @@ $(document).ready(function(){
     setTimeout(function(url) { window.location = url; }, 5000, linkUrl);
   });
 });
-gsap.from('.menu-icon',{
-  opacity: 0,
-  duration: 0.7,
-  x: -50,
-  stagger: 0.1,
-  ease: "power4.out"
-});
-gsap.from('.logo-home',{
-  opacity: 0,
-  duration: 1,
-  ease: "circ.in",
-  delay: 6
-});
-gsap.from('.content-copy-home',{
-  opacity: 0,
-  duration: 1,
-  ease: "circ.in",
-  delay: 6.5
-});
-gsap.from('.loading-screen-content',{
-  opacity: 0,
-  duration: 1,
-  ease: "circ.in"
-});
-gsap.to('.loading-screen',{
-  opacity:0,
-  duration: 1,
-  delay: 5
-});
-gsap.to('.homepage-fullscreen-menu',{
-  opacity:1,
-  duration:1,
-  delay:12
-});
-gsap.to('.menu',  {
-  duration:0.5,
-  width: 66
-});
-gsap.from('.content-title', {
-  duration: 0.5,
-  opacity: 0,
-  x: 600
-});
-gsap.from('.content-copy', {
-  duration: 0.6,
-  opacity: 0,
-  x: 600,
-  delay: 0.1
-});
-gsap.from('.content-prices', {
-  duration: 0.7,
-  opacity: 0,
-  x: 600,
-  delay: 0.2
-});
+
+
+
 
 // create main timeline
 var masterTl = new TimelineMax({paused:true, onComplete:onComplete});
@@ -92,8 +40,9 @@ masterTl
 .play();
 }
 
-
 // Test play reverse
+
+// This function will return one element
 var select = document.querySelector.bind(document);
 
 // This function will return a node-list of elements
@@ -107,9 +56,11 @@ var menuIcons = selectAll(".menu-icon");
 var menuItem = selectAll(".menu-item");
 var menuLogo = select("#logo-text");
 var socials = selectAll(".social-media-icon")
-
-
+var menuLink = document.getElementsByClassName("menu-link");
 // Create a paused timeline with our tweens
+
+
+
 // Hover timelines
 // menu bar width on hover
 var tl1 = new TimelineLite({ paused: true })
@@ -146,6 +97,14 @@ var tl1 = new TimelineLite({ paused: true })
     tl6.to(menu, 0.2, {
       width: 0
     });
+    var value;
+    var buttons = document.getElementsByClassName('menu-link');
+
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].onclick = function(){
+        tl6.play()
+      }
+    }
 
 
 
@@ -167,14 +126,17 @@ function onComplete() {
       tl4.reverse();
       tl5.reverse();
      } );
+   // buttons.addEventListener("click", function() {
+   //   tl6.play();
+   // } );
 }
-var buttons = document.getElementsByClassName('menu-link');
+function clickFunction(){
+  tl6.play();
+}
+// function onComplete() {
+//
+// }
 
-for (var i = 0; i < buttons.length; i++) {
-  buttons[i].onclick = function(){
-    tl6.play();
-  }
-}
 
 
 window.onload = init;
