@@ -11,6 +11,7 @@
   </head>
   <body>
     <div class="container">
+      <div class="menu-bg"></div>
       <nav class="menu">
         <div class="homepage-links">
           <?php

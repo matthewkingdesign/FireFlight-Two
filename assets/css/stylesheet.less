@@ -318,8 +318,21 @@ p:not(:last-of-type){
 	}
 }
 // MENU
-.menu{
+.menu-bg{
 	background: @light-grey;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	float: left;
+	transition: 0.4s;
+	display: block;
+	z-index: 1;
+	opacity: 0.7;
+
+}
+.menu{
+	// background: @light-grey;
 	// width: 66px;
 	height: 100vh;
 	top: 0;
@@ -328,7 +341,7 @@ p:not(:last-of-type){
 	float: left;
 	transition: 0.4s;
 	display: block;
-	z-index: 4;
+	z-index: 2;
 	&:hover{
 		// width: 10%;
 	}
@@ -338,6 +351,7 @@ p:not(:last-of-type){
 		transform: translate(0, -50%);
 		opacity: 1;
 		width: 66px;
+		z-index: 4;
 		> a:nth-child(2) img {
 			height: 35px;
 		}

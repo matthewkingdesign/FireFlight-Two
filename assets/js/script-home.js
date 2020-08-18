@@ -79,67 +79,68 @@ var tlOnLoad = new TimelineLite()
     x: -50,
     stagger: 0.1,
     ease: "power4.out",
-    delay: 2.5
-  }, "-=2")
-  .from(socials, {
-    duration: 0.7,
-    opacity: 0,
-    x: -50,
-    stagger: 0.1
-  }, "-=1")
-  .to(menu,  {
-    duration:0.5,
-    width: 66,
-    ease: "power4.out",
-    delay: 2
-  }, "-=3")
-  .to(menuBg,  {
-    duration:0.5,
-    width: 66,
-    ease: "power4.out",
-    delay: 2
-  }, "-=3")
-  .from('.content-right',{
-    duration: 0.5,
-    x: 600,
-    delay: 2
-  }, "-=3")
-  .from('.content-title', {
-    duration: 0.5,
-    opacity: 0,
-    x: 600,
-    delay: 2
-  }, "-=3")
-  .from(contactCta, {
-    duration: 0.5,
-    opacity: 0,
-    x: 600,
-    delay: 2.1
-  }, "-=3")
-  .from(copyPs, {
-    duration: 0.6,
-    opacity: 0,
-    x: 600,
-    delay: 2.1
-  }, "-=3")
-  .from(pricePs, {
-    duration: 0.7,
-    opacity: 0,
-    x: 600,
-    delay: 2.2
-  }, "-=3")
-  .from(emailPs, {
-    duration: 0.6,
-    opacity: 0,
-    x: 600,
-    delay: 2.3
-  }, "-=3")
-  .from(phonePs, {
-    duration: 0.6,
-    opacity: 0,
-    x: 600,
-    delay: 2.4
-  }, "-=3");
+    delay: 12
+  });
+  // .from(socials, {
+  //   duration: 0.7,
+  //   opacity: 0,
+  //   x: -50,
+  //   stagger: 0.1,
+  //   delay: 9
+  // }, "-=7")
+  // .to(menu,  {
+  //   duration:0.5,
+  //   width: 66,
+  //   ease: "power4.out",
+  //   delay: 9
+  // }, "-=7")
+  // .to(menuBg,  {
+  //   duration:0.5,
+  //   width: 66,
+  //   ease: "power4.out",
+  //   delay: 9
+  // }, "-=7")
+  // .from('.content-right',{
+  //   duration: 0.5,
+  //   x: 600,
+  //   delay: 7
+  // }, "-=6")
+  // .from('.content-title', {
+  //   duration: 0.5,
+  //   opacity: 0,
+  //   x: 600,
+  //   delay: 2
+  // }, "-=3")
+  // .from(contactCta, {
+  //   duration: 0.5,
+  //   opacity: 0,
+  //   x: 600,
+  //   delay: 2.1
+  // }, "-=3")
+  // .from(copyPs, {
+  //   duration: 0.6,
+  //   opacity: 0,
+  //   x: 600,
+  //   delay: 2.1
+  // }, "-=3")
+  // .from(pricePs, {
+  //   duration: 0.7,
+  //   opacity: 0,
+  //   x: 600,
+  //   delay: 2.2
+  // }, "-=3")
+  // .from(emailPs, {
+  //   duration: 0.6,
+  //   opacity: 0,
+  //   x: 600,
+  //   delay: 2.3
+  // }, "-=3")
+  // .from(phonePs, {
+  //   duration: 0.6,
+  //   opacity: 0,
+  //   x: 600,
+  //   delay: 2.4
+  // }, "-=3");
 
 // Create a paused timeline with our tweens
 // On load timelines
