@@ -363,7 +363,7 @@ p:not(:last-of-type){
 
 		}
 		.menu-icon{
-			width: 20px;
+			width: 18px;
 			position: relative;
 			display: block;
 			margin: 0 auto;
@@ -372,13 +372,18 @@ p:not(:last-of-type){
 		}
 	}
 }
+@media only screen and (max-height: 800px) {
+  .menu-icon {
+    width: 15px;
+  }
+}
 // .menu-icon:hover .menu-item{
 // 	transition: 0.3s;
 // 	opacity: 1;
 // }
 .socials{
-	height: 100px;
-	bottom: 50px;
+	height: 50px;
+	bottom: 40px;
 	left: 0;
 	position: absolute;
 	.social-media-icon{
