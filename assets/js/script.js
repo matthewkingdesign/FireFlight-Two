@@ -50,6 +50,10 @@ var selectAll = document.querySelectorAll.bind(document);
 // Select our elements
 var buttons = document.getElementsByClassName('menu-link');
 var pricePs = document.getElementsByClassName('content-prices')[0].children
+var copyPs = document.getElementsByClassName('content-copy')[0].children
+var emailPs = document.getElementsByClassName('content-email')[0].children
+var phonePs = document.getElementsByClassName('content-phone')[0].children
+var contactCta = select(".content-cta");
 var menu = select(".menu");
 var menuIcons = selectAll(".menu-icon");
 var menuItem = selectAll(".menu-item");
@@ -89,7 +93,13 @@ var tlOnLoad = new TimelineLite()
     x: 600,
     delay: 2
   }, "-=3")
-  .from('.content-copy', {
+  .from(contactCta, {
+    duration: 0.5,
+    opacity: 0,
+    x: 600,
+    delay: 2.1
+  }, "-=3")
+  .from(copyPs, {
     duration: 0.6,
     opacity: 0,
     x: 600,
@@ -100,6 +110,18 @@ var tlOnLoad = new TimelineLite()
     opacity: 0,
     x: 600,
     delay: 2.2
+  }, "-=3")
+  .from(emailPs, {
+    duration: 0.6,
+    opacity: 0,
+    x: 600,
+    delay: 2.3
+  }, "-=3")
+  .from(phonePs, {
+    duration: 0.6,
+    opacity: 0,
+    x: 600,
+    delay: 2.4
   }, "-=3");
 
 // Create a paused timeline with our tweens

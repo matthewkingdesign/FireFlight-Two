@@ -15,8 +15,11 @@
   </div>
   <div id="right-content-container-<?= $page->id() ?>" class="content-right-container">
     <h1 class="content-title"><?= $page->title() ?></h1>
-    <p class="content-copy"><?= $page->text()?></p>
+    <div class="content-copy"><?= $page->text()->kt()?></div>
     <div class="content-prices"><?= $page->prices()->kt() ?></div>
+    <h1 class="content-cta">Get in touch</h1>
+    <div class="content-email"><?= $page->email()->kt() ?></div>
+    <div class="content-phone"><?= $page->phone()->kt() ?></div>
   </div>
 </div>
 

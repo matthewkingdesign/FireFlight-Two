@@ -24,3 +24,9 @@ columns:
             type: textarea
           prices:
             type: textarea
+          email:
+            label: Email
+            type: email
+          phone:
+            label: Phone
+            type: tel
