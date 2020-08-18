@@ -10,9 +10,8 @@
 
   </div>
 
-  <div id="right-<?= $page->id() ?>" class="content-right">
-
-  </div>
+  <div id="right-<?= $page->id() ?>" class="content-right"></div>
+  
   <div id="right-content-container-<?= $page->id() ?>" class="content-right-container">
     <h1 class="content-title"><?= $page->title() ?></h1>
     <div class="content-copy"><?= $page->text()->kt()?></div>

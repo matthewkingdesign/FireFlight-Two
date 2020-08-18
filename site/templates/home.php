@@ -1,5 +1,6 @@
 <?php snippet('header') ?>
 <div class="content-home">
+
   <div class="loading-screen">
     <div class="loading-screen-content">
       <?php if($image = $page->image('logo-light.svg')): ?>
@@ -15,34 +16,20 @@
     </iframe>
   </div>
 <!-- LOGO AND SUB HEADER CALLING LOGO SPECIFICALLY WITH IF STATEMENT  -->
-  <div class="content-home-holder">
+  <!-- <div class="content-home-holder">
     <?php if($image = $page->image('logo-light.svg')): ?>
       <img class="logo-home" src="<?= $image->url() ?>" alt="">
     <?php endif ?>
     <h1 class="content-copy-home"><?= $page->text()->kt() ?></h1>
-  </div>
-<!-- FULLSCREEN MENU -->
-<!-- <div class="homepage-fullscreen-menu">
-  <nav class="homepage-menu"> -->
-    <!--LOGO -->
-    <!-- <?php if($image = $page->image('logo-light.svg')): ?>
-      <img class="logo-fullscreen-menu" src="<?= $image->url() ?>" alt="">
-    <?php endif ?>
-    <span id="homepage-subtitle"><?= $page->heading() ?></span>
-    <div class="homepage-menu-item-holder"> -->
-      <!--MENU IMAGES AND LINKS -->
-      <!-- <?php foreach($site->children()->listed() as $subpage): ?>
-        <a class="homepage-menu-link"  href="<?= $subpage->url() ?>">
-          <?php
-          $images =  $subpage->menuiconlight()->toFiles();
-          foreach($images as $image): ?>
-            <img class="homepage-menu-icon" src="<?= $image->url() ?>" alt="">
-          <?php endforeach ?>
-          <span class="homepage-menu-item"><?= $subpage->title()->upper() ?></span>
-        </a>
-
-      <?php endforeach ?>
-    </div> -->
-  </nav>
+  </div> -->
 </div>
+
+<div id="right-content-container-<?= $page->id() ?>" class="content-right-container">
+  <div id="content-copy-<?= $page->id() ?>" class="content-copy"><?= $page->text()->kt()?></div>
+  <div class="content-prices"><?= $page->prices()->kt() ?></div>
+  <div class="content-email"><?= $page->email()->kt() ?></div>
+  <div class="content-phone"><?= $page->phone()->kt() ?></div>
+</div>
+</div>
+
 <?php snippet('footer') ?>

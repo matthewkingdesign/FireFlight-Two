@@ -5,6 +5,7 @@ $(document).ready(function(){
     setTimeout(function(url) { window.location = url; }, 3000, linkUrl);
   });
 });
+
 // Homepage
 gsap.from('.logo-home',{
   opacity: 0,
@@ -18,6 +19,12 @@ gsap.from('.content-copy-home',{
   ease: "circ.in",
   delay: 6.5
 });
+// gsap.to('.menu',{
+//   width:66,
+//   duration: 0.5
+// });
+
+//LOADING PAGE
 gsap.from('.loading-screen-content',{
   opacity: 0,
   duration: 1,
@@ -29,11 +36,12 @@ gsap.to('.loading-screen',{
   duration: 1,
   delay: 5
 });
-// gsap.to('.homepage-fullscreen-menu',{
-//   opacity:1,
-//   duration:1,
-//   delay:12
-// });
+gsap.to('.homepage-fullscreen-menu',{
+  opacity:1,
+  duration:1,
+  delay:12
+});
+
 // create main timeline
 var masterTl = new TimelineMax({paused:true, onComplete:onComplete});
 
@@ -49,10 +57,10 @@ var select = document.querySelector.bind(document);
 var selectAll = document.querySelectorAll.bind(document);
 // Select our elements
 var buttons = document.getElementsByClassName('menu-link');
-var pricePs = document.getElementsByClassName('content-prices')[0].children
-var copyPs = document.getElementsByClassName('content-copy')[0].children
-var emailPs = document.getElementsByClassName('content-email')[0].children
-var phonePs = document.getElementsByClassName('content-phone')[0].children
+var pricePs = document.getElementsByClassName('content-prices')[0].children;
+var copyPs = document.getElementsByClassName('content-copy')[0].children;
+var emailPs = document.getElementsByClassName('content-email')[0].children;
+var phonePs = document.getElementsByClassName('content-phone')[0].children;
 var contactCta = select(".content-cta");
 var menu = select(".menu");
 var menuIcons = selectAll(".menu-icon");
@@ -60,6 +68,8 @@ var menuItem = selectAll(".menu-item");
 var menuLogo = select("#logo-text");
 var socials = selectAll(".social-media-icon");
 // on load timeline
+
+
 var tlOnLoad = new TimelineLite()
 // Menu bar
   .from(menuIcons,{
@@ -167,7 +177,7 @@ var tl1 = new TimelineLite({ paused: true })
   //   });
 
 
-
+// Trigger animations on different events
 function onComplete() {
     // Add event handlers for mouse enter/leave
     menu.addEventListener("mouseenter", function() {

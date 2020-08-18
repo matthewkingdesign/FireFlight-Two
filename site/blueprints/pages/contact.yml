@@ -48,9 +48,6 @@ columns:
           instaUrl:
             label: instagram
             type: url
-          twitterUrl:
-            label: twitter
-            type: url
           facebookUrl:
             label: facebook
             type: url
