@@ -381,7 +381,6 @@ p:not(:last-of-type){
 	left: 0;
 	position: fixed;
 	float: left;
-	clear: both;
 	transition: 0.4s;
 	display: block;
 	z-index: 4;
@@ -393,6 +392,7 @@ p:not(:last-of-type){
 		top: 50%;
 		transform: translate(0, -50%);
 		opacity: 1;
+		width: 66px;
 		> a:nth-child(2) img {
 			height: 35px;
 		}
@@ -408,20 +408,20 @@ p:not(:last-of-type){
 			font-family: agenda, sans-serif;
 			font-weight: 700;
 			font-style: normal;
-			width: 100px;
 			opacity: 0;
-			width: 200px;
 			text-align: center;
 			margin: 0 auto;
 			margin-top: 20px;
+			width: 190px;
 
 		}
 		.menu-icon{
-			height: 20px;
+			width: 20px;
 			position: relative;
-			left: 0;
-			margin: 0 0 0 18px;
+			display: block;
+			margin: 0 auto;
 			opacity: 1;
+
 		}
 	}
 }

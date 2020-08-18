@@ -110,12 +110,12 @@ var tlOnLoad = new TimelineLite()
 // menu bar width on hover
 var tl1 = new TimelineLite({ paused: true })
   tl1.to(menu, 0.01, {
-    width: 200
+    width: 190
   });
   // menu bar icons move and grow on hover
   var tl2 = new TimelineLite({ paused: true})
     tl2.to(menuIcons, 0.2, {
-      height: 32,
+      width: 24,
       x: 60,
       marginTop: 10,
       stagger: 0.1
@@ -170,6 +170,7 @@ function onComplete() {
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].onclick = function(){
     // tl6.play();
+    tl1.reverse();
     tlOnLoad.reverse();
     tl2.reverse();
     tl3.reverse();
