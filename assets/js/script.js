@@ -93,12 +93,12 @@ var tlOnLoad = new TimelineLite()
     ease: "power4.out",
     delay: 2
   }, "-=3")
-  .to(menuBg,  {
-    duration:0.5,
-    width: 66,
-    ease: "power4.out",
-    delay: 2
-  }, "-=3")
+  // .to(menuBg,  {
+  //   duration:0.5,
+  //   width: 66,
+  //   ease: "power4.out",
+  //   delay: 2
+  // }, "-=3")
   .from('.content-right',{
     duration: 0.5,
     x: 600,
