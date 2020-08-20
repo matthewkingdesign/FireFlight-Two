@@ -155,10 +155,10 @@ var tlOnLoad = new TimelineLite()
 var tl1 = new TimelineLite({ paused: true })
   .to(menu, 0.01, {
     width: 190
-  })
-  .to(menuBg, 0.01, {
-    width: 190
   });
+  // .to(menuBg, 0.01, {
+  //   width: 190
+  // });
   // menu bar icons move and grow on hover
   var tl2 = new TimelineLite({ paused: true})
     tl2.to(menuIcons, 0.1, {
@@ -170,8 +170,10 @@ var tl1 = new TimelineLite({ paused: true })
   // menu bar text fade in on hover
   var tl3 = new TimelineLite({ paused: true})
     tl3.to(menuItem, 0.05, {
+      display: 'block',
       opacity: 1,
-      stagger: 0.1
+      stagger: 0.1,
+
     });
   // logo fade in on menu hover
   var tl4 = new TimelineLite({ paused: true})
