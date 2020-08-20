@@ -97,7 +97,7 @@ var tlOnLoad = new TimelineLite()
     width: 66,
     ease: "power4.out",
     delay: 2
-  }, "-=3")
+  }, "-=2")
   // .to(menuBg,  {
   //   duration:0.5,
   //   width: 66,
@@ -105,46 +105,46 @@ var tlOnLoad = new TimelineLite()
   //   delay: 2
   // }, "-=3")
   .from('.content-right',{
-    duration: 0.5,
+    duration: 0.3,
     x: 600,
-    delay: 2
-  }, "-=3")
+    delay: 1
+  }, "-=2")
   .from('.content-title', {
-    duration: 0.5,
+    duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 2
-  }, "-=3")
+    delay: 1
+  }, "-=2")
   .from(contactCta, {
-    duration: 0.5,
+    duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 2.1
-  }, "-=3")
+    delay: 1.1
+  }, "-=2")
   .from(copyPs, {
-    duration: 0.6,
+    duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 2.1
-  }, "-=3")
+    delay: 1.1
+  }, "-=2")
   .from(pricePs, {
-    duration: 0.7,
+    duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 2.2
-  }, "-=3")
+    delay: 1.2
+  }, "-=2")
   .from(emailPs, {
-    duration: 0.6,
+    duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 2.3
-  }, "-=3")
+    delay: 1.3
+  }, "-=2")
   .from(phonePs, {
-    duration: 0.6,
+    duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 2.4
-  }, "-=3");
+    delay: 1.4
+  }, "-=2");
 
 // Create a paused timeline with our tweens
 // On load timelines
@@ -161,7 +161,7 @@ var tl1 = new TimelineLite({ paused: true })
   });
   // menu bar icons move and grow on hover
   var tl2 = new TimelineLite({ paused: true})
-    tl2.to(menuIcons, 0.2, {
+    tl2.to(menuIcons, 0.1, {
       width: 24,
       x: 60,
       marginTop: 10,
@@ -180,7 +180,7 @@ var tl1 = new TimelineLite({ paused: true })
     });
   // social media icons move right
   var tl5 = new TimelineLite({ paused: true})
-    tl5.to(socials, 0.2, {
+    tl5.to(socials, 0.1, {
       x: 60,
       stagger: 0.1
     });
@@ -221,6 +221,7 @@ for (var i = 0; i < buttons.length; i++) {
     tlOnLoad.reverse();
     tl2.reverse();
     tl3.reverse();
+    tl5.reverse();
   }
 }
 
