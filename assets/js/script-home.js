@@ -72,15 +72,21 @@ var socials = selectAll(".social-media-icon");
 
 
 var tlOnLoad = new TimelineLite()
-// Menu bar
+// homepage animation
+.from(copyPs, {
+  duration: 0.6,
+  opacity: 0,
+  x: 600,
+  delay: 7.5
+},)
   .from(menuIcons,{
     opacity: 0,
     duration: 0.7,
     x: -50,
     stagger: 0.1,
     ease: "power4.out",
-    delay: 12
-  });
+    delay: 8
+  }, "-=7");
   // .from(socials, {
   //   duration: 0.7,
   //   opacity: 0,
@@ -109,20 +115,15 @@ var tlOnLoad = new TimelineLite()
   //   duration: 0.5,
   //   opacity: 0,
   //   x: 600,
-  //   delay: 2
-  // }, "-=3")
+  //   delay: 7
+  // })
   // .from(contactCta, {
   //   duration: 0.5,
   //   opacity: 0,
   //   x: 600,
   //   delay: 2.1
   // }, "-=3")
-  // .from(copyPs, {
-  //   duration: 0.6,
-  //   opacity: 0,
-  //   x: 600,
-  //   delay: 2.1
-  // }, "-=3")
+
   // .from(pricePs, {
   //   duration: 0.7,
   //   opacity: 0,

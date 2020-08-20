@@ -163,22 +163,26 @@ p:not(:last-of-type){
 		}
 	}
 }
-// #right-inspection{
+
+/***** BACKGROUND COLOURS *****/
+
+// #right-inspection, #menu-bg-inspection{
 // 	background-color: @light-orange
 // }
-// #right-estate-agents{
+// #right-estate-agents, #menu-bg-estate-agents{
 // 	background-color: #14311d;
 // 	// #bed04a
 // 	// #c1ee8f
 // }
-// #right-weddings{
-// 	background-color: #012c33;
+// #right-weddings, #menu-bg-weddings{
+// 	background-color: #d5a871;
+// 	//#012c33
 // 	// #d5a871
 // }
-// #right-bespoke{
+// #right-bespoke, #menu-bg-bespoke{
 // 	background-color: #161c1c;
 // }
-// #right-about{
+// #right-about, #menu-bg-about{
 // 	background-color:@light-grey ;
 //
 // 	//#373239
@@ -186,12 +190,16 @@ p:not(:last-of-type){
 // #right-content-container-about{
 // 	color: @dark-grey;
 // }
-// #right-contact{
+// #right-contact, #menu-bg-contact{
 // 	background-color: @dark-grey;
 // }
-// #right-showreel{
+// #right-showreel, #menu-bg-showreel{
 // 	background-color: @light-grey;
 // }
+.content-right, .menu-bg{
+	background-color: @dark-grey;
+	opacity: 0.8;
+}
 /* PAGE TEMPLATE */
 .content{
 	display: block;
@@ -239,7 +247,6 @@ p:not(:last-of-type){
 	position: absolute;
 	top: 0;
 	right: 0;
-	opacity: 0.7;
 }
 .content-right-container{
 	padding: 30px;
@@ -319,7 +326,6 @@ p:not(:last-of-type){
 }
 // MENU
 .menu-bg{
-	// background: @light-grey;
 	height: 100vh;
 	top: 0;
 	left: 0;
@@ -328,11 +334,10 @@ p:not(:last-of-type){
 	transition: 0.4s;
 	display: block;
 	z-index: 1;
-	opacity: 0.7;
 }
-#menu-bg-weddings{
-	background-color: #012c33;
-}
+// #menu-bg-weddings{
+// 	background-color: #012c33;
+// }
 .menu{
 	// background: @light-grey;
 	// width: 66px;
