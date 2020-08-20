@@ -11,16 +11,16 @@
   </head>
   <body>
     <div class="container">
-      <div class="menu-bg"></div>
+      <div id="menu-bg-<?= $page->id() ?>" class="menu-bg"></div>
       <nav class="menu">
         <div class="homepage-links">
           <?php
             $homePage = $site->findPageOrDraft('home');
-              if($image = $homePage->image('f-icon.svg')): ?>
+              if($image = $homePage->image('f-icon-light.svg')): ?>
               <a class="homepage-icon-link" href="<?= $homePage->url() ?>"> <img id="f-icon-home" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
           <?php
-            if($image = $homePage->image('logo-text.svg')): ?>
+            if($image = $homePage->image('logo-text-light.svg')): ?>
             <a href="<?= $homePage->url() ?>"> <img id="logo-text" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
         </div>
@@ -28,7 +28,7 @@
           <?php foreach($site->children()->listed() as $subpage): ?>
             <a class="menu-link" href="<?= $subpage->url() ?>">
               <?php
-                $images =  $subpage->menuicon()->toFiles();
+                $images =  $subpage->menuiconlight()->toFiles();
                 foreach($images as $image): ?>
                   <img class="menu-icon" src="<?= $image->url() ?>" alt="">
               <?php endforeach ?>
@@ -40,11 +40,11 @@
         <div class="socials">
           <?php
             $contactPage = $site->findPageOrDraft('contact');
-            if($image = $contactPage->image('insta-fill.svg')): ?>
+            if($image = $contactPage->image('insta-fill-light.svg')): ?>
             <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
           <?php
-            if($image = $contactPage->image('facebook-fill.svg')): ?>
+            if($image = $contactPage->image('facebook-fill-light.svg')): ?>
             <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
         </div>
