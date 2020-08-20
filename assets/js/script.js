@@ -73,6 +73,11 @@ var socials = selectAll(".social-media-icon");
 
 var tlOnLoad = new TimelineLite()
 // Menu bar
+  .to('.background-img', {
+    opacity: 1,
+    duration: 0.7,
+    delay: 0.7
+  })
   .from(menuIcons,{
     opacity: 0,
     duration: 0.7,
