@@ -75,8 +75,8 @@ var tlOnLoad = new TimelineLite()
 // Menu bar
   .to('.background-img', {
     opacity: 1,
-    duration: 0.7,
-    delay: 0.7
+    duration: 0.3,
+    delay: 0.3
   })
   .from(menuIcons,{
     opacity: 0,
@@ -162,14 +162,14 @@ var tl1 = new TimelineLite({ paused: true })
   // menu bar icons move and grow on hover
   var tl2 = new TimelineLite({ paused: true})
     tl2.to(menuIcons, 0.1, {
-      width: 24,
+      width: 20,
       x: 60,
-      marginTop: 10,
+      y: -20,
       stagger: 0.1
     });
   // menu bar text fade in on hover
   var tl3 = new TimelineLite({ paused: true})
-    tl3.to(menuItem, 0.05, {
+    tl3.to(menuItem, 0.2, {
       display: 'block',
       opacity: 1,
       stagger: 0.1,

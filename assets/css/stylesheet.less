@@ -360,11 +360,12 @@ p:not(:last-of-type){
 	}
 	.menu-item-holder{
 		position: absolute;
-		top: 50%;
-		transform: translate(0, -50%);
+		top: 30%;
+		transform: translate(0, -30%);
 		opacity: 1;
 		width: 66px;
 		z-index: 4;
+		height: 50%;
 		> a:nth-child(2) img {
 			height: 35px;
 		}
@@ -374,6 +375,10 @@ p:not(:last-of-type){
 		// &:hover{
 		// 	opacity: 1;
 		// }
+		.menu-link{
+			height: 50px;
+			background: @light-grey;
+		}
 		.menu-item{
 			color: @light-grey;
 			display: block;
@@ -384,18 +389,15 @@ p:not(:last-of-type){
 			opacity: 0;
 			text-align: center;
 			margin: 0 auto;
-			margin-top: 10px;
 			width: 190px;
-			height: 28px;
-
+			// display: none;
 		}
 		.menu-icon{
 			width: 18px;
-			position: relative;
 			display: block;
 			margin: 0 auto;
 			opacity: 1;
-
+			margin-top: 45px;
 
 		}
 	}
