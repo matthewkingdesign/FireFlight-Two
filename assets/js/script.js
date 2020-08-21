@@ -2,7 +2,7 @@ $(document).ready(function(){
   $('.menu-link').click(function(e) {
     e.preventDefault();
     var linkUrl = $(this).attr('href');
-    setTimeout(function(url) { window.location = url; }, 3000, linkUrl);
+    setTimeout(function(url) { window.location = url; }, 1200, linkUrl);
   });
 });
 
@@ -70,17 +70,12 @@ var menuLogo = select("#logo-text");
 var socials = selectAll(".social-media-icon");
 // on load timeline
 
-
-var tlOnLoad = new TimelineLite()
+var tlMenuLoad = new TimelineLite()
 // Menu bar
-  .to('.background-img', {
-    opacity: 1,
-    duration: 0.3,
-    delay: 0.3
-  })
+
   .from(menuIcons,{
     opacity: 0,
-    duration: 0.7,
+    duration: 0.5,
     x: -50,
     stagger: 0.1,
     ease: "power4.out",
@@ -97,54 +92,55 @@ var tlOnLoad = new TimelineLite()
     width: 66,
     ease: "power4.out",
     delay: 2
-  }, "-=2")
-  // .to(menuBg,  {
-  //   duration:0.5,
-  //   width: 66,
-  //   ease: "power4.out",
-  //   delay: 2
-  // }, "-=3")
+  }, "-=2");
+
+var tlOnLoad = new TimelineLite()
+  .to('.background-img', {
+    opacity: 1,
+    duration: 0.3,
+    delay: 0.3
+  })
   .from('.content-right',{
     duration: 0.3,
     x: 600,
-    delay: 1
-  }, "-=2")
+    delay: 0.5
+  }, "-=1")
   .from('.content-title', {
     duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 1
-  }, "-=2")
-  .from(contactCta, {
-    duration: 0.3,
-    opacity: 0,
-    x: 600,
-    delay: 1.1
-  }, "-=2")
+    delay: 0.5
+  }, "-=1")
   .from(copyPs, {
     duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 1.1
-  }, "-=2")
+    delay: 0.6
+  }, "-=1")
   .from(pricePs, {
     duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 1.2
-  }, "-=2")
+    delay: 0.8
+  }, "-=1")
+  .from(contactCta, {
+    duration: 0.3,
+    opacity: 0,
+    x: 600,
+    delay: 0.9
+  }, "-=1")
   .from(emailPs, {
     duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 1.3
-  }, "-=2")
+    delay: 0.9
+  }, "-=1")
   .from(phonePs, {
     duration: 0.3,
     opacity: 0,
     x: 600,
-    delay: 1.4
-  }, "-=2");
+    delay: 1
+  }, "-=1");
 
 // Create a paused timeline with our tweens
 // On load timelines
@@ -169,11 +165,11 @@ var tl1 = new TimelineLite({ paused: true })
     });
   // menu bar text fade in on hover
   var tl3 = new TimelineLite({ paused: true})
-    tl3.to(menuItem, 0.2, {
+    tl3.to(menuItem, 0.1, {
       display: 'block',
+      width: 190,
       opacity: 1,
-      stagger: 0.1,
-
+      stagger: 0.05
     });
   // logo fade in on menu hover
   var tl4 = new TimelineLite({ paused: true})
@@ -186,6 +182,22 @@ var tl1 = new TimelineLite({ paused: true })
       x: 60,
       stagger: 0.1
     });
+    var tl7 = new TimelineLite({paused: true})
+      .to(menuItem,{
+        duration: 0.2,
+        stagger: 0.1,
+        opacity: 0,
+        delay: 0.1,
+        x: -100,
+      })
+      .to(menuIcons,{
+        duration: 0.2,
+        stagger: 0.1,
+        opacity: 0,
+        delay: 0.1,
+        x: -100,
+      },"-=1");
+
   // click timelines
   // var tl6 = new TimelineLite({ paused: true})
   //   tl6.to(menu, 0.2, {
@@ -219,11 +231,13 @@ function onComplete() {
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].onclick = function(){
     // tl6.play();
-    tl1.reverse();
+    tl7.play();
     tlOnLoad.reverse();
-    tl2.reverse();
-    tl3.reverse();
+    tl1.reverse();
+    // tl2.reverse();
+    // tl3.reverse();
     tl5.reverse();
+
   }
 }
 
