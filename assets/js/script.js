@@ -47,7 +47,7 @@ var masterTl = new TimelineMax({paused:true, onComplete:onComplete});
 
 // make this all happen on page load
 function init(){
-masterTl.play();
+// masterTl.play();
 }
 // Test play reverse
 var select = document.querySelector.bind(document);
