@@ -32,4 +32,4 @@
 </div>
 </div>
 
-<?php snippet('footer-home') ?>
+<?php snippet('footer') ?>
