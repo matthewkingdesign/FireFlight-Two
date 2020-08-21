@@ -79,11 +79,15 @@ a{
 p:not(:last-of-type){
 	margin-bottom: 1rem;
 }
+
 @dark-grey: #05080D;
 @light-grey: #FAF9F8;
 @light-orange: #F07F2C;
 @dark-orange: #EA5B0C;
 
+html{
+ background: @light-orange;	
+}
 
 /* GLOBAL */
 .container{
@@ -234,7 +238,7 @@ p:not(:last-of-type){
 		top: 0;
 		left: 0;
 		opacity: 0;
-	}
+		}
 	@media screen and (max-width: 1024px) { /* Specific to this particular image */
   img.content-left  {
     left: 50%;
@@ -393,7 +397,7 @@ p:not(:last-of-type){
 			opacity: 0;
 			text-align: center;
 			margin: 0 auto;
-			width: 190px;
+			width: 150px;
 			margin-top: 10px;
 			// display: none;
 		}

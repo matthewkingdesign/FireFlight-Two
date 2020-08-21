@@ -98,7 +98,7 @@ var tlOnLoad = new TimelineLite()
   .to('.background-img', {
     opacity: 1,
     duration: 0.3,
-    delay: 0.3
+    delay: 0.2
   })
   .from('.content-right',{
     duration: 0.3,
@@ -159,7 +159,7 @@ var tl1 = new TimelineLite({ paused: true })
   var tl2 = new TimelineLite({ paused: true})
     tl2.to(menuIcons, 0.1, {
       width: 22,
-      x: 60,
+      x: 40,
       // y: -20,
       stagger: 0.1
     });
@@ -167,7 +167,7 @@ var tl1 = new TimelineLite({ paused: true })
   var tl3 = new TimelineLite({ paused: true})
     tl3.to(menuItem, 0.1, {
       display: 'block',
-      width: 190,
+      width: 150,
       opacity: 1,
       stagger: 0.05
     });
