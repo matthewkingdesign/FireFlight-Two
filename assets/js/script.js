@@ -2,7 +2,7 @@ $(document).ready(function(){
   $('.menu-link').click(function(e) {
     e.preventDefault();
     var linkUrl = $(this).attr('href');
-    setTimeout(function(url) { window.location = url; }, 1200, linkUrl);
+    setTimeout(function(url) { window.location = url; }, 1500, linkUrl);
   });
 });
 
@@ -47,7 +47,7 @@ var masterTl = new TimelineMax({paused:true, onComplete:onComplete});
 
 // make this all happen on page load
 function init(){
-// masterTl.play();
+masterTl.play();
 }
 // Test play reverse
 var select = document.querySelector.bind(document);

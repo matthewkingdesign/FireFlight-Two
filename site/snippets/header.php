@@ -10,6 +10,13 @@
     <link rel="stylesheet/less" type="text/css" href="assets/css/stylesheet.less" />
   </head>
   <body>
+
+    <!-- ADDED THIS FROM BARBA EXAMPLE -->
+    <div class="loading-container">
+      <div class="loading-screen">
+      </div>
+    </div>
+    <!-- ADDED BARBA DATA WRAPPER HERE -->
     <div class="container">
       <div id="menu-bg-<?= $page->id() ?>" class="menu-bg"></div>
       <nav class="menu">
@@ -43,7 +50,7 @@
             if($image = $contactPage->image('facebook-fill-light.svg')): ?>
             <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
-          <?php  
+          <?php
             if($image = $contactPage->image('insta-fill-light.svg')): ?>
             <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
