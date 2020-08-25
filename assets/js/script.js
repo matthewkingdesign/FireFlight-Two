@@ -2,7 +2,7 @@ $(document).ready(function(){
   $('.menu-link').click(function(e) {
     e.preventDefault();
     var linkUrl = $(this).attr('href');
-    setTimeout(function(url) { window.location = url; }, 1500, linkUrl);
+    setTimeout(function(url) { window.location = url; }, 2000, linkUrl);
   });
 });
 
