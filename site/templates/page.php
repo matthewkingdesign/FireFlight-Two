@@ -1,8 +1,5 @@
 <?php snippet('header') ?>
-
-<!-- ADDED DATA CONTAINER AND NAMESPACe HOME HERE -->
-<div class="content-holder" data-barba="wrapper">
-  <div class="content" data-barba="container" data-barba-namespace="<?= $page->id() ?>">
+  <div class="content">
     <div id="left-<?= $page->id() ?>" class="content-left">
 
       <?php
@@ -24,7 +21,7 @@
       <div class="content-phone"><?= $page->phone()->kt() ?></div>
     </div>
   </div>
-</div>
+
 
 
 <?php snippet('footer') ?>

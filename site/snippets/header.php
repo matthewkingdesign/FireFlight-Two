@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="https://use.typekit.net/ogl6oma.css">
     <link rel="stylesheet/less" type="text/css" href="assets/css/stylesheet.less" />
   </head>
-  <body>
+      <!-- ADDED BARBA DATA WRAPPER HERE -->
+  <body data-barba="wrapper">
 
     <!-- ADDED THIS FROM BARBA EXAMPLE -->
     <div class="loading-container">
-      <div class="loading-screen">
+      <div class="loading-screen-fade">
       </div>
     </div>
-    <!-- ADDED BARBA DATA WRAPPER HERE -->
-    <div class="container">
+
+    <div class="container" data-barba="container" data-barba-namespace="<?= $page->id() ?>">
+
       <div id="menu-bg-<?= $page->id() ?>" class="menu-bg"></div>
       <nav class="menu">
         <div class="homepage-links">

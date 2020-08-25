@@ -2,7 +2,7 @@ $(document).ready(function(){
   $('.menu-link').click(function(e) {
     e.preventDefault();
     var linkUrl = $(this).attr('href');
-    setTimeout(function(url) { window.location = url; }, 2000, linkUrl);
+    setTimeout(function(url) { window.location = url; }, 1200, linkUrl);
   });
 });
 
@@ -61,6 +61,7 @@ var pricePs = document.getElementsByClassName('content-prices')[0].children;
 var copyPs = document.getElementsByClassName('content-copy')[0].children;
 var emailPs = document.getElementsByClassName('content-email')[0].children;
 var phonePs = document.getElementsByClassName('content-phone')[0].children;
+var loadingScreen = document.querySelector('.loading-screen-fade');
 var contactCta = select(".content-cta");
 var menu = select(".menu");
 var menuBg = select(".menu-bg");
@@ -98,7 +99,7 @@ var tlOnLoad = new TimelineLite()
   .to('.background-img', {
     opacity: 1,
     duration: 0.3,
-    delay: 0.2
+    delay: 0.3
   })
   .from('.content-right',{
     duration: 0.3,
@@ -159,7 +160,7 @@ var tl1 = new TimelineLite({ paused: true })
   var tl2 = new TimelineLite({ paused: true})
     tl2.to(menuIcons, 0.1, {
       width: 22,
-      x: 40,
+      x: 60,
       // y: -20,
       stagger: 0.1
     });
@@ -167,7 +168,7 @@ var tl1 = new TimelineLite({ paused: true })
   var tl3 = new TimelineLite({ paused: true})
     tl3.to(menuItem, 0.1, {
       display: 'block',
-      width: 150,
+      width: 190,
       opacity: 1,
       stagger: 0.05
     });
@@ -196,7 +197,12 @@ var tl1 = new TimelineLite({ paused: true })
         opacity: 0,
         delay: 0.1,
         x: -100,
-      },"-=1");
+      },"-=1")
+      .to(loadingScreen,{
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.2
+      });
 
   // click timelines
   // var tl6 = new TimelineLite({ paused: true})
@@ -243,3 +249,66 @@ for (var i = 0; i < buttons.length; i++) {
 
 
 window.onload = init;
+
+// function pageTransitionIn() {
+//     var tlPageIn = new TimelineLite()
+//     .to(loadingScreen, {
+//       duration: .2,
+//       opacity:1
+//     });
+// };
+// function pageTransitionOut(container) {
+//   var tlPageOut = new TimelineLite()
+//   .to(loadingScreen, {
+//     delay: 1,
+//     duration: .4,
+//     opacity:0
+//   })
+//   .call(contentAnimation, [container])
+// };
+//
+// $(function() {
+//   barba.init({
+//     // We don't want "synced transition"
+//     // because both content are not visible at the same time
+//     // and we don't need next content is available to start the page transition
+//     // sync: true,
+//     transitions: [{
+//       // NB: `data` was not used.
+//       // But usually, it's safer (and more efficient)
+//       // to pass the right container as a paramater to the function
+//       // and get DOM elements directly from it
+//       async leave(data) {
+//         // Not needed with async/await or promises
+//         // const done = this.async();
+//
+//         await pageTransitionIn()
+//         // No more needed as we "await" for pageTransition
+//         // And i we change the transition duration, no need to update the delay…
+//         // await delay(1000)
+//
+//         // Not needed with async/await or promises
+//         // done()
+//
+//         // Loading screen is hiding everything, time to remove old content!
+//         data.current.container.remove()
+//       },
+//
+//       async enter(data) {
+//         await pageTransitionOut(data.next.container)
+//       },
+//       // Variations for didactical purpose…
+//       // Better browser support than async/await
+//       // enter({ next }) {
+//       //   return pageTransitionOut(next.container);
+//       // },
+//       // More concise way
+//       // enter: ({ next }) => pageTransitionOut(next.container),
+//
+//       async once(data) {
+//         await contentAnimation(data.next.container);
+//       }
+//     }]
+//   });
+//
+// });
