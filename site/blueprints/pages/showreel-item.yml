@@ -1,0 +1,7 @@
+title: Showreel Item
+
+fields:
+  gallery:
+    label: "Selected images for gallery"
+    type: files
+    max: 20

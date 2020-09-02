@@ -1,0 +1,70 @@
+title: Terms
+
+columns:
+  left:
+    width: 1/2
+    fields:
+      menuicon:
+        label: "Icon"
+        type: files
+        max: 1
+      menuiconlight:
+        label: "Light Icon"
+        type: files
+        max: 1
+      heading:
+        type: text
+      planning:
+        label: "Planning Section Title"
+        type: text
+      planningText:
+        label: "Planning Section Copy"
+        type: textarea
+      weather:
+        label: "Weather Section Title"
+        type: text
+      weatherText:
+        label: "Weather Section Copy"
+        type: textarea
+      travel:
+        label: "Travel Section Title"
+        type: text
+      travelText:
+        label: "Travel Section Copy"
+        type: textarea
+  right:
+    width: 1/2
+    sections:
+      content:
+        type: fields
+        fields:
+          airspace:
+            label: "Airspace Section Title"
+            type: text
+          airspaceText:
+            label: "Airspace Section Copy"
+            type: textarea
+          imageRights:
+            label: "Image Rights Section Title"
+            type: text
+          imageRightsText:
+            label: "Image Rights Section Copy"
+            type: textarea
+          guidance:
+            label: "Guidance Section Title"
+            type: text
+          guidanceText:
+            label: "Guidance Section Copy"
+            type: textarea
+          payment:
+            label: "Payment Section Title"
+            type: text
+          paymentText:
+            label: "Payment Section Copy"
+            type: textarea
+          email:
+            label: Email
+            type: email
+          phone:
+            label: Phone
+            type: tel

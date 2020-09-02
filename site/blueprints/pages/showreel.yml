@@ -1,0 +1,32 @@
+title: Showreel
+columns:
+  left:
+    width: 1/2
+    fields:
+      heading:
+        type: text
+      text:
+        type: textarea
+      email:
+        label: Email
+        type: email
+      phone:
+        label: Phone
+        type: tel
+      menuicon:
+        label: "Icon"
+        type: files
+        max: 1
+      menuiconlight:
+        label: "Light Icon"
+        type: files
+        max: 1
+  right:
+    width: 1/2
+    sections:
+      showreel:
+        type: pages
+        layout: cards
+        image:
+          cover: true
+          ratio: 3/4
