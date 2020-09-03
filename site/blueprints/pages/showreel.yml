@@ -29,4 +29,4 @@ columns:
         layout: cards
         image:
           cover: true
-          ratio: 3/4
+          ratio: 3/2
