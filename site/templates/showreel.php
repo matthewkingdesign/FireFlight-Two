@@ -13,9 +13,6 @@
         <iframe src="https://player.vimeo.com/video/448823024" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
       </div>
       <h1 id="showreel-subtitle" class="content-title">Still</br> Photography</h1>
-
-
-
         <ul class="showreel-flex">
           <?php foreach($page->children() as $showreel): ?>
             <?php
@@ -27,19 +24,6 @@
             <?php endforeach ?>
           <?php endforeach ?>
         </ul>
-
-
-
-
-
-
-
     </div>
-
   </div>
-
-
-
-
-
 <?php snippet('footer-showreel') ?>
