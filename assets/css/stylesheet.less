@@ -86,7 +86,7 @@ p:not(:last-of-type){
 @dark-orange: #EA5B0C;
 
 html{
- background: @light-orange;
+ background: @dark-orange;
 }
 
 // MENU
@@ -371,11 +371,15 @@ html{
 		opacity: 0;
 		}
 	@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.content-left  {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
-}
+		img.content-left  {
+			left: 50%;
+			margin-left: -512px;   /* 50% */
+		}
+	}
+	@media screen and (max-width:400px) {
+		float: right;
+		clear: both;
+	}
 	// .landscape{
 	//
 	// }
@@ -391,6 +395,11 @@ html{
 	position: absolute;
 	top: 0;
 	right: 0;
+	@media screen and (max-width:400px) {
+		width: 100%;
+		float: left;
+		clear: both;
+	}
 }
 .content-right-container{
 	padding: 30px;
@@ -401,6 +410,10 @@ html{
 	display: block;
 	right: 0;
 	color: @light-grey;
+	@media screen and (max-width:400px) {
+		width: 100%;
+		margin-left: 20%;
+	}
 }
 .content-title{
 	font-family: sofia-pro, sans-serif;
@@ -447,13 +460,13 @@ html{
 }
 /***** TERMS *****/
 #left-content-terms-conditions{
-	background-color: @light-grey;
+	background-color: @dark-orange;
 }
 #left-terms-conditions{
-	background: @light-grey;
+	background: @dark-orange
 }
 #right-terms-conditions{
-	background: @light-grey;
+	background: @dark-orange
 }
 #right-content-container-terms-conditions{
 	color: @dark-grey;
