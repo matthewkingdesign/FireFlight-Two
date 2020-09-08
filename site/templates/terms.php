@@ -1,4 +1,4 @@
-<?php snippet('header-dark') ?>
+<?php snippet('header') ?>
   <div id="left-content-<?= $page->id() ?>" class="content">
     <div id="left-<?= $page->id() ?>" class="terms-content-left">
 
