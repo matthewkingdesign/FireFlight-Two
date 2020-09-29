@@ -12,7 +12,7 @@
 
 
   </head>
-  <body>
+  <body data-barba="wrapper">
     <div class="container">
       <div class="homepage-links">
         <?php
