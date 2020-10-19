@@ -251,3 +251,107 @@
           <?php endif ?>
         <?php endforeach ?>
       </ul>
+
+
+
+
+      <div class="menu-open">AAA</div>
+      <div class="fullscreen-menu-container">
+        <nav class="fullscreen-menu">
+          <!--LOGO -->
+          <?php if($image = $page->image('logo-light.svg')): ?>
+            <img class="logo-fullscreen-menu" src="<?= $image->url() ?>" alt="">
+          <?php endif ?>
+          <span id="fullscreen-subtitle"><?= $page->heading() ?></span>
+          <div class="fullscreen-menu-item-holder">
+            <!--MENU IMAGES AND LINKS -->
+            <?php foreach($site->children()->listed() as $subpage): ?>
+              <a class="fullscreen-menu-link"  href="<?= $subpage->url() ?>">
+                <?php
+                $images =  $subpage->menuiconlight()->toFiles();
+                foreach($images as $image): ?>
+                  <img class="fullscreen-menu-icon" src="<?= $image->url() ?>" alt="">
+                <?php endforeach ?>
+                <span class="fullscreen-menu-item"><?= $subpage->title()->upper() ?></span>
+              </a>
+
+            <?php endforeach ?>
+          </div>
+
+
+          .fullscreen-menu-container{
+    	background: red;
+    	height: 100vh;
+    	width: 100vw;
+    	z-index: 13;
+    	top: 0;
+    	left: 0;
+    	position: relative;
+		opacity: 0;
+		// display: none;
+    	#fullscreen-subtitle{
+    		color: @light-grey;
+    		font-family: agenda, sans-serif;
+    		font-weight: 700;
+    		font-style: normal;
+    		font-size: 1em;
+    		display: block;
+    		margin: 0 auto;
+    		text-align: center;
+    		padding-top: 10px;
+    		letter-spacing: 3px;
+    	}
+    	.fullscreen-menu-item-holder{
+    		width: 100%;
+    		margin: 0 auto;
+    		display: grid;
+    		grid-template-columns: repeat(3, 90px);
+    
+    		justify-items: center;
+    		justify-content: center;
+    		align-items: top;
+    		grid-gap: 150px;
+    		position: absolute;
+    		top: 50%;
+    		transform: translate(0, -50%);
+    		:nth-child(7){
+    			grid-column-start: -3;
+    		}
+    		> a img{
+    		width: 70px;
+    		transition: 0.5s;
+    		}
+    		> a img:hover{
+    		width: 75px;
+    		transition: .3s;
+    		}
+    		// :nth-child(5) img{
+    		// 	width: 70px;
+    		// }
+    		.fullscreen-menu-icon{
+    			justify-content: center;
+    		}
+    		.fullscreen-menu-item{
+    			color: @light-grey;
+    			text-align: center;
+    			display: block;
+    			margin: 0 auto;
+    			margin-top: 20px;
+    			font-family: agenda, sans-serif;
+    			font-weight: 700;
+    			font-style: normal;
+    			letter-spacing: 3px;
+    			opacity: 0;
+    		}
+    	}
+    	.fullscreen-menu-link:hover .fullscreen-menu-item{
+    		transition: .5s;
+    		opacity: 1;
+    	}
+    	.logo-fullscreen-menu{
+    		width: 200px;
+    		margin: 0 auto;
+    		display: block;
+    		padding-top: 6%;
+    	}
+    }

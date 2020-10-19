@@ -36,11 +36,7 @@ gsap.to('.loading-screen',{
   duration: 1,
   delay: 5
 });
-gsap.to('.homepage-fullscreen-menu',{
-  opacity:1,
-  duration:1,
-  delay:12
-});
+
 
 // create main timeline
 var masterTl = new TimelineMax({paused:true, onComplete:onComplete});

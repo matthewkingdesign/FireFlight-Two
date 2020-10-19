@@ -55,3 +55,17 @@
           <?php endif ?>
         </div>
       </nav>
+      <div class="fullscreen-menu-container">
+      <div class="fullscreen-menu-item-holder">
+          <?php foreach($site->children()->listed() as $subpage): ?>
+            <a href="<?= $subpage->url() ?>">
+              <?php
+                $images =  $subpage->menuicon()->toFiles();
+                foreach($images as $image): ?>
+                  <img class="fullscreen-menu-icon" src="<?= $image->url() ?>" alt="">
+              <?php endforeach ?>
+              <span class="fullscreen-menu-item"><?= $subpage->title()->upper() ?></span>
+            </a>
+          <?php endforeach ?>
+        </div>
+      </div>

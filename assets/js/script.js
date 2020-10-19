@@ -1,4 +1,5 @@
 
+if (document.documentElement.clientWidth > 900) {
 // function delay(n) {
 //   n = n || 2000
 //   // Keep official documentation wording, done -> resolve
@@ -109,11 +110,7 @@ gsap.to('.loading-screen',{
   duration: 1,
   delay: 5
 });
-gsap.to('.homepage-fullscreen-menu',{
-  opacity:1,
-  duration:1,
-  delay:12
-});
+
 
 // create main timeline
 var masterTl = new TimelineMax({paused:true, onComplete:onComplete});
@@ -143,7 +140,7 @@ var menuLogo = select("#logo-text");
 var socials = selectAll(".social-media-icon");
 // on load timeline
 
-var tlMenuLoad = new TimelineLite()
+	var tlMenuLoad = new TimelineLite()
 // Menu bar
 
   .from(menuIcons,{
@@ -321,6 +318,8 @@ for (var i = 0; i < buttons.length; i++) {
 
   }
 }
+}
+
 
 
 window.onload = init;
