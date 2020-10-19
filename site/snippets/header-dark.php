@@ -8,6 +8,8 @@
     <title><?= $page->title() ?></title>
     <link rel="stylesheet" href="https://use.typekit.net/ogl6oma.css">
     <link rel="stylesheet/less" type="text/css" href="assets/css/stylesheet.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/css/halkaBox.css" />
+  
   </head>
       <!-- ADDED BARBA DATA WRAPPER HERE -->
   <body data-barba="wrapper">

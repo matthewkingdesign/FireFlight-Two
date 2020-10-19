@@ -189,3 +189,65 @@
     // 		padding-top: 6%;
     // 	}
     // }
+
+
+    <!-- THIS ONE RENDERS LOADS OF CHILDREN -->
+   <!-- <?php
+        $children = $page->children()->listed();
+        foreach ($children as $child): ?>
+        <?php $images = $child->images(); ?>
+        <?php if ($images->isNotEmpty()): ?>
+
+        <ul class="showreel-flex" id="img-<?= $children->indexOf($child)+1 ?>">
+          <?php foreach($page->children() as $showreel): ?>
+            <?php
+              $images =  $showreel->gallery()->toFiles();
+              foreach($images as $image): ?>
+              <li>
+                <img class="showreel-flex-image"  src="<?= $image->url() ?>" alt="">
+              </li>
+            <?php endforeach ?>
+          <?php endforeach ?>
+        </ul>
+
+        <?php endif ?>
+      <?php endforeach ?>  -->
+
+
+
+
+<!-- THIS ONE RENDERS THE FLEXBOX WELL BUT I CANT GET THE CORRECT DYNAMIC NUMBERS -->
+        <!-- <ul class="showreel-flex">
+          <?php foreach($page->children() as $showreel): ?>
+            <?php
+              $images =  $showreel->gallery()->toFiles();
+              foreach($images as $image): ?>
+              <li>
+                <img class="showreel-flex-image" id="img-<?= $images->indexOf($showreel) ?>" src="<?= $image->url() ?>" alt="">
+              </li>
+            <?php endforeach ?>
+          <?php endforeach ?>
+        </ul> -->
+    </div>
+  </div>
+
+
+        
+  <ul class="showreel-flex gallery"  >
+        <?php
+          $children = $page->children()->listed();
+          foreach ($children as $child): ?>
+          <?php $images = $child->images(); ?>
+          <?php if ($images->isNotEmpty()): ?>
+
+                  
+                      <?php foreach ($images as $image) : ?>
+                        <li id="carousel-t">
+                          <img class="showreel-flex-image" src="<?= $image->url() ?>" alt="" onclick="openModal();currentSlide(<?=  $children->indexOf($child)+1 ?>)">
+                        </li>               
+                    <?php endforeach ?>
+                  
+
+          <?php endif ?>
+        <?php endforeach ?>
+      </ul>
