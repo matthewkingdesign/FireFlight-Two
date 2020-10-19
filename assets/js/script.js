@@ -318,11 +318,12 @@ for (var i = 0; i < buttons.length; i++) {
 
   }
 }
-}
-
-
 
 window.onload = init;
+} // end of IF 
+
+
+
 // halkaBox.options({
 //   hideButtons: true,       // hide buttons on touch devices (true || false)
 //   animation: "slide",      // animation type on next/prev ("slide" || "fade")
@@ -333,4 +334,15 @@ window.onload = init;
 //   nextPrevOnWheel: true,   // goto next/prev image on wheel (true || false)
 //   isZoomable: true         // ability to zoom image (true || false)
 // });
-halkaBox.run("gallery1");
+// halkaBox.run("gallery1");
+
+document.querySelector('.close-btn').addEventListener('click', function(){
+  console.log('you clicke me');
+  document.querySelector('.menu').style.display = 'none';
+  document.querySelector('.open-btn').style.display = 'block';
+});
+document.querySelector('.open-btn').addEventListener('click', function(){
+  console.log('you clicke me');
+  document.querySelector('.open-btn').style.display = 'none';
+  document.querySelector('.menu').style.display = 'block';
+});

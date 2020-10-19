@@ -58,6 +58,30 @@
           <?php endif ?>
 
         </div>
+        <div class="close-btn">
+          <?php
+            $homePage = $site->findPageOrDraft('home');
+              if($image = $homePage->image('close-menu.svg')): ?>
+               <img id="" class="" src="<?= $image->url() ?>" alt="">
+          <?php endif ?>
+
+        </div>
+
+
+        
       </nav>
 
+
+      <div class="open-btn">
+          <?php
+            $homePage = $site->findPageOrDraft('home');
+              if($image = $homePage->image('open-menu.svg')): ?>
+               <img id="" class="" src="<?= $image->url() ?>" alt="">
+          <?php endif ?>
+
+        </div>
+
+      
+
+      
       

@@ -354,4 +354,4 @@
     		display: block;
     		padding-top: 6%;
     	}
-    }
+    
