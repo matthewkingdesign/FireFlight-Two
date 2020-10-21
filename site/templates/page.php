@@ -17,7 +17,7 @@
       <div class="content-copy"><?= $page->text()->kt()?></div>
       <div class="content-prices"><?= $page->prices()->kt() ?></div>
       <h1 class="content-cta">Get in touch</h1>
-      <div class="content-email"><?= $page->email()->kt() ?></div>
+      <a href = "mailto: support@fireflightdrones.com"><div class="content-email"><?= $page->email()->kt() ?></div></a>
       <div class="content-phone"><?= $page->phone()->kt() ?></div>
     </div>
   </div>
