@@ -233,7 +233,7 @@ var tl1 = new TimelineLite({ paused: true })
   // menu bar icons move and grow on hover
   var tl2 = new TimelineLite({ paused: true})
     tl2.to(menuIcons, 0.1, {
-      // width: 22,
+      width: 18,
 
       // // y: -20,
       // stagger: 0.1
