@@ -4,11 +4,11 @@
 
       <div class="terms-content">
         <div class="terms-top-bar">
-          <h1 class="content-title"><?= $page->heading() ?></h1>
-          <div class="content-copy"><?= $page->text()->kt()?></div>
-          <div class="content-prices"><?= $page->prices()->kt() ?></div>
+          <h1 id="content-title<?= $page->id() ?>" class="content-title"><?= $page->heading() ?></h1>
+          <!-- <div class="content-copy"><?= $page->text()->kt()?></div>
+          <div class="content-prices"><?= $page->prices()->kt() ?></div> -->
           <!-- <h1 class="content-cta">Get in touch</h1> -->
-          <div class="content-email"><?= $page->email()->kt() ?></div>
+          <!-- <div class="content-email"><?= $page->email()->kt() ?></div> -->
           <!-- <div class="content-phone"><?= $page->phone()->kt() ?></div> -->
        </div>
       
@@ -44,7 +44,6 @@
       </div>
         
       </div>
-      <p class="terms-scroll">SCROLL FOR MORE</p>  
     </div>
 
     <!-- <div id="right-<?= $page->id() ?>" class="content-right"></div> -->
@@ -56,4 +55,4 @@
 
 
 
-<?php snippet('footer') ?>
+<?php snippet('footer-showreel') ?>

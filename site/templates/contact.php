@@ -5,7 +5,7 @@
     <?php
       $images =  $page->gallery()->toFiles();
       foreach($images as $image): ?>
-      <img class="<?= $image->orientation() ?>" src="<?= $image->url() ?>" alt="">
+      <img class="background-img <?= $image->orientation() ?>" src="<?= $image->url() ?>" alt="">
     <?php endforeach ?>
 
   </div>

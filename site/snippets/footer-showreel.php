@@ -11,6 +11,6 @@ We are only using listed (or numbered folders in the file structure)-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
   <?= js('assets/js/less.min.js') ?>
   <?= js('assets/js/halkaBox.js') ?>
-  <?= js('assets/js/script.js') ?>
+  <?= js('assets/js/script-showreel.js') ?>
   
 </html>
