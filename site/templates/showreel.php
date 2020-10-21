@@ -2,7 +2,7 @@
   <div id="content-<?= $page->id() ?>" class="content">
     <div id="left-<?= $page->id() ?>" class="content-left">
 
-      <h1 class="content-title"><?= $page->title() ?></h1>
+      <h1 id="content-title-<?= $page->id() ?>" class="content-title"><?= $page->title() ?></h1>
       <!-- <div class="content-copy"><?= $page->text()->kt()?></div>
       <div class="content-prices"><?= $page->prices()->kt() ?></div>
       <h1 class="content-cta">Get in touch</h1>
