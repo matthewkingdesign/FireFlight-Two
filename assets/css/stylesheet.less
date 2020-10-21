@@ -207,6 +207,11 @@ html{
 		}
 		> a:nth-child(8) img {
 			height: 25px;
+			@media screen and (max-height:600px){
+				width:1em;
+				margin-top: 10px;
+				height: 20px;
+			}
 		}
 		// &:hover{
 		// 	opacity: 1;
@@ -218,6 +223,9 @@ html{
 			display: inline-block;
 			position: relative;
 			// width: ;
+			@media screen and (max-height:800px){
+				height: 30px;
+			}
 		}
 		.menu-item{
 			color: @light-grey;
@@ -253,6 +261,10 @@ html{
 			@media screen and (max-width:400px) {
 				width: 1.7em;
 				margin-bottom: 20px;
+			}
+			@media screen and (max-height:800px){
+				width:1em;
+				margin-top: 5px;
 			}
 
 		}
@@ -300,15 +312,23 @@ html{
 	right: 30px;
 	top:30px;
 	position: absolute;
+	display: none;
+	@media screen and (max-width:400px) {
+		display: block;
+	}
 }
+
 .open-btn{
 	width: 30px;
 	height: 30px;
-	display: block;
+	display: none;
 	position: absolute;
 	z-index: 999;
 	right: 30px;
 	top:30px;
+	@media screen and (max-width:400px) {
+		display: block;
+	}
 }
 // .menu-item-holder > a:nth-child(2) img {
 // 	background: blue;
