@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="container" data-barba="container" data-barba-namespace="<?= $page->id() ?>">
+    <div id="container-<?= $page->id() ?>" class="container" data-barba="container" data-barba-namespace="<?= $page->id() ?>">
 
       <div id="menu-bg-<?= $page->id() ?>" class="menu-bg"></div>
       <nav class="menu">

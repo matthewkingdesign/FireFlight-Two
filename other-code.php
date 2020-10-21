@@ -355,3 +355,11 @@
     		padding-top: 6%;
     	}
     
+
+      <!-- LOGO AND SUB HEADER CALLING LOGO SPECIFICALLY WITH IF STATEMENT  -->
+  <!-- <div class="content-home-holder">
+    <?php if($image = $page->image('logo-light.svg')): ?>
+      <img class="logo-home" src="<?= $image->url() ?>" alt="">
+    <?php endif ?>
+    <h1 class="content-copy-home"><?= $page->text()->kt() ?></h1>
+  </div> -->
