@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="https://use.typekit.net/ogl6oma.css">
     <link rel="stylesheet/less" type="text/css" href="assets/css/stylesheet.less" />
     <link rel="stylesheet/less" type="text/css" href="assets/css/halkaBox.css" />
-  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181030538-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-181030538-1');
+    </script>
   </head>
       <!-- ADDED BARBA DATA WRAPPER HERE -->
   <body data-barba="wrapper">
