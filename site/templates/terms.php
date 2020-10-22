@@ -17,6 +17,10 @@
           <h1 id="planning-title" class="terms-content-title"><?= $page->planning() ?></h1>
           <div id="planning-copy" class="terms-content-copy"><?= $page->planningText()->kt()?></div>
         </div>
+        <div class="grid-item-covid">
+          <h1 id="covid-title" class="terms-content-title"><?= $page->covid() ?></h1>
+          <div id="covid-copy" class="terms-content-copy"><?= $page->covidText()->kt()?></div>
+        </div>
         <div class="grid-item-weather">
           <h1 id="weather-title" class="terms-content-title"><?= $page->weather() ?></h1>
           <div id="weather-copy" class="terms-content-copy"><?= $page->weatherText()->kt()?></div>

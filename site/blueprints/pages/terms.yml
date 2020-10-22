@@ -20,6 +20,12 @@ columns:
       planningText:
         label: "Planning Section Copy"
         type: textarea
+      covid:
+        label: "Covid Section Title"
+        type: text
+      covidText:
+        label: "Covid Section Copy"
+        type: textarea
       weather:
         label: "Weather Section Title"
         type: text
