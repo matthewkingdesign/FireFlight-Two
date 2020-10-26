@@ -10,7 +10,7 @@
     </div>
   </div>
   <!-- FULLSCREEN VIDEO LOADED FROM VIMEO -->
-  <div class="vimeo-wrapper">
+  <div id="vimeo-home" class="vimeo-wrapper">
     <iframe src="https://player.vimeo.com/video/444547127?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
              frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
     </iframe>

@@ -103,15 +103,15 @@
           <?php endforeach ?>
         </div>
 
-        <div class="socials">
+        <div class="socials-dark">
           <?php
           $contactPage = $site->findPageOrDraft('contact');
             if($image = $contactPage->image('facebook-fill.svg')): ?>
-            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
+            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon-dark" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
           <?php
             if($image = $contactPage->image('insta-fill.svg')): ?>
-            <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
+            <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon-dark" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
 
         </div>
