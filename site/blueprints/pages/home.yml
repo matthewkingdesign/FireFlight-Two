@@ -15,22 +15,26 @@ columns:
       logo:
         label: "logo for homepage"
         type: files
+      heading:
+        type: text
+      text:
+        type: textarea
+      prices:
+        type: textarea
+      email:
+        label: Email
+        type: email
+      phone:
+        label: Phone
+        type: tel
 
   right:
     width: 1/2
     sections:
-      content:
-        type: fields
-        fields:
-          heading:
-            type: text
-          text:
-            type: textarea
-          prices:
-            type: textarea
-          email:
-            label: Email
-            type: email
-          phone:
-            label: Phone
-            type: tel
+      showreel:
+        type: pages
+        layout: cards
+        image:
+          cover: true
+          ratio: 3/2
+

@@ -1,4 +1,3 @@
-<!-- This is the header file for the homepage. loads style sheets etc and just the menu as for FIRE FLIGHT DRONES that is the only thing repeated through out all the site.  -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -9,28 +8,45 @@
     <title><?= $page->title() ?></title>
     <link rel="stylesheet" href="https://use.typekit.net/ogl6oma.css">
     <link rel="stylesheet/less" type="text/css" href="assets/css/stylesheet.less" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181030538-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-
+      gtag('config', 'UA-181030538-1');
+    </script>
   </head>
+      <!-- ADDED BARBA DATA WRAPPER HERE -->
   <body data-barba="wrapper">
-    <div class="container">
-      <div class="homepage-links">
-        <?php
-          $homePage = $site->findPageOrDraft('home');
-            if($image = $homePage->image('f-icon.svg')): ?>
-            <a class="homepage-icon-link" href="<?= $homePage->url() ?>"> <img id="f-icon-home" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
-        <?php endif ?>
-        <?php
-          if($image = $homePage->image('logo-text.svg')): ?>
-          <a href="<?= $homePage->url() ?>"> <img id="logo-text" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
-        <?php endif ?>
+
+    <!-- ADDED THIS FROM BARBA EXAMPLE -->
+    <div class="loading-container">
+      <div class="loading-screen-fade">
       </div>
+    </div>
+
+    <div id="container-<?= $page->id() ?>" class="container" data-barba="container" data-barba-namespace="<?= $page->id() ?>">
+
+      <div id="menu-bg-<?= $page->id() ?>" class="menu-bg"></div>
       <nav class="menu">
+        <div class="homepage-links">
+          <?php
+            $homePage = $site->findPageOrDraft('home');
+              if($image = $homePage->image('f-icon-light.svg')): ?>
+              <a class="homepage-icon-link" href="<?= $homePage->url() ?>"> <img id="f-icon-home" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
+          <?php
+            if($image = $homePage->image('logo-text-light.svg')): ?>
+            <a href="<?= $homePage->url() ?>"> <img id="logo-text" class="homepage-icon" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
+        </div>
         <div class="menu-item-holder">
           <?php foreach($site->children()->listed() as $subpage): ?>
             <a class="menu-link" href="<?= $subpage->url() ?>">
               <?php
-                $images =  $subpage->menuicon()->toFiles();
+                $images =  $subpage->menuiconlight()->toFiles();
                 foreach($images as $image): ?>
                   <img class="menu-icon" src="<?= $image->url() ?>" alt="">
               <?php endforeach ?>
@@ -41,31 +57,77 @@
 
         <div class="socials">
           <?php
-            $contactPage = $site->findPageOrDraft('contact');
-             if($image = $contactPage->image('twitter-fill.svg')): ?>
-             <a href="<?= $contactPage->twitterUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
+          $contactPage = $site->findPageOrDraft('contact');
+            if($image = $contactPage->image('facebook-fill-light.svg')): ?>
+            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
+          <?php
+            if($image = $contactPage->image('insta-fill-light.svg')): ?>
+            <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
+
+        </div>
+        <div class="close-btn">
+          <?php
+            $homePage = $site->findPageOrDraft('home');
+              if($image = $homePage->image('close-menu.svg')): ?>
+               <img id="" class="" src="<?= $image->url() ?>" alt="">
+          <?php endif ?>
+
+        </div>  
+      </nav>
+
+
+      <nav class="menu-dark">
+        <div class="homepage-links-dark">
+          <?php
+            $homePage = $site->findPageOrDraft('home');
+              if($image = $homePage->image('f-icon.svg')): ?>
+              <a class="homepage-icon-link-dark" href="<?= $homePage->url() ?>"> <img id="f-icon-home-dark" class="homepage-icon-dark" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
+          <?php
+            if($image = $homePage->image('logo-text.svg')): ?>
+            <a href="<?= $homePage->url() ?>"> <img id="logo-text-dark" class="homepage-icon-dark" src="<?= $image->url() ?>" alt=""></a>
+          <?php endif ?>
+        </div>
+        <div class="menu-item-holder-dark">
+          <?php foreach($site->children()->listed() as $subpage): ?>
+            <a class="menu-link-dark" href="<?= $subpage->url() ?>">
+              <?php
+                $images =  $subpage->menuicon()->toFiles();
+                foreach($images as $image): ?>
+                  <img class="menu-icon-dark" src="<?= $image->url() ?>" alt="">
+              <?php endforeach ?>
+              <span class="menu-item-dark"><?= $subpage->title()->upper() ?></span>
+            </a>
+          <?php endforeach ?>
+        </div>
+
+        <div class="socials">
+          <?php
+          $contactPage = $site->findPageOrDraft('contact');
+            if($image = $contactPage->image('facebook-fill.svg')): ?>
+            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
           <?php
             if($image = $contactPage->image('insta-fill.svg')): ?>
             <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
-          <?php
-            if($image = $contactPage->image('facebook-fill.svg')): ?>
-            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
-          <?php endif ?>
+
         </div>
       </nav>
-      <div class="fullscreen-menu-container">
-      <div class="fullscreen-menu-item-holder">
-          <?php foreach($site->children()->listed() as $subpage): ?>
-            <a href="<?= $subpage->url() ?>">
-              <?php
-                $images =  $subpage->menuicon()->toFiles();
-                foreach($images as $image): ?>
-                  <img class="fullscreen-menu-icon" src="<?= $image->url() ?>" alt="">
-              <?php endforeach ?>
-              <span class="fullscreen-menu-item"><?= $subpage->title()->upper() ?></span>
-            </a>
-          <?php endforeach ?>
+
+
+      <div class="open-btn">
+          <?php
+            $homePage = $site->findPageOrDraft('home');
+              if($image = $homePage->image('open-menu.svg')): ?>
+               <img id="" class="" src="<?= $image->url() ?>" alt="">
+          <?php endif ?>
+
         </div>
-      </div>
+
+      
+
+      
+      

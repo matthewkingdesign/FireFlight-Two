@@ -34,5 +34,7 @@
           <?php endif ?>
         <?php endforeach ?>
       </ul>
+    </div>
+  </div>    
 <?php snippet('footer-showreel') ?>
 

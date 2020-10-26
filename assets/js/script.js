@@ -127,15 +127,19 @@ var select = document.querySelector.bind(document);
 var selectAll = document.querySelectorAll.bind(document);
 // Select our elements
 var buttons = document.getElementsByClassName('menu-link');
+var buttonsDark = document.getElementsByClassName('menu-link-dark');
 var pricePs = document.getElementsByClassName('content-prices')[0].children;
 var copyPs = document.getElementsByClassName('content-copy')[0].children;
 var emailPs = document.getElementsByClassName('content-email')[0].children;
 var phonePs = document.getElementsByClassName('content-phone')[0].children;
 var contactCta = select(".content-cta");
 var menu = select(".menu");
+var menuDark = select(".menu-dark");
 var menuBg = select(".menu-bg");
 var menuIcons = selectAll(".menu-icon");
+var menuIconsDark = selectAll(".menu-icon-dark");
 var menuItem = selectAll(".menu-item");
+var menuItemDark = selectAll(".menu-item-dark");
 var menuLogo = select("#logo-text");
 var socials = selectAll(".social-media-icon");
 // on load timeline
@@ -294,12 +298,12 @@ function onComplete() {
      } );
     menu.addEventListener("mouseleave", function() {
       gsap.delayedCall(0.2, function(){
-       tl1.reverse();
-       tl1a.reverse();
-       tl2.reverse();
-      tl3.reverse();
-      tl4.reverse();
-      tl5.reverse();
+        tl1.reverse();
+        tl1a.reverse();
+        tl2.reverse();
+        tl3.reverse();
+        tl4.reverse();
+        tl5.reverse();
     });
       
      } );
@@ -318,7 +322,13 @@ for (var i = 0; i < buttons.length; i++) {
 
   }
 }
+// window.onscroll = function() {myFunction()};
 
+// function myFunction() {
+//   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+//     tl7.play();
+//   }
+// }
 window.onload = init;
 } else{
 // halkaBox.options({
