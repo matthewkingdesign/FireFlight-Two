@@ -24,6 +24,7 @@
   <div class="content-phone"><?= $page->phone()->kt() ?></div>
 </div>
 </div>
+<div id='waypoint-1'></div>
   <div id="content-<?= $page->id() ?>">
       <div id="left-<?= $page->id() ?>">
         <h1 id="content-title-<?= $page->id() ?>" class="content-title"><?= $page->title() ?></h1>

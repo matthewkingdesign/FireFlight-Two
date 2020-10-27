@@ -157,6 +157,34 @@ if (document.documentElement.clientWidth > 900) {
       ease: "power4.out",
       delay: 2.5
     }, "-=2")
+
+    .from(socials, {
+      duration: 0.7,
+      opacity: 0,
+      x: -50,
+      stagger: 0.1
+    }, "-=1")
+
+    .to(menu,  {
+      duration:0.5,
+      width: 66,
+      ease: "power4.out",
+      delay: 2
+    }, "-=2")
+  var tlHideDarkMenu = new TimelineLite()
+    .to(menuDark, {
+      x: -100
+    })
+  var tlOnLoadDark = new TimelineLite({paused: true})
+    .to(menuDark,{
+      x: 0
+    })
+    .to(menuDark,  {
+      duration:0.5,
+      width: 66,
+      ease: "power4.out",
+      delay: 2
+    }, "-=2")
     .from(menuIconsDark,{
       opacity: 0,
       duration: 0.5,
@@ -165,31 +193,12 @@ if (document.documentElement.clientWidth > 900) {
       ease: "power4.out",
       delay: 2.5
     }, "-=2")
-    .from(socials, {
-      duration: 0.7,
-      opacity: 0,
-      x: -50,
-      stagger: 0.1
-    }, "-=1")
     .from(socialsDark, {
       duration: 0.7,
       opacity: 0,
       x: -50,
       stagger: 0.1
-    }, "-=1")
-    .to(menu,  {
-      duration:0.5,
-      width: 66,
-      ease: "power4.out",
-      delay: 2
-    }, "-=2")
-    .to(menuDark,  {
-      duration:0.5,
-      width: 66,
-      ease: "power4.out",
-      delay: 2
-    }, "-=2");
-  
+    }, "-=1");
   var tlOnLoad = new TimelineLite()
     .to('.background-img', {
       opacity: 1,
@@ -409,21 +418,24 @@ if (document.documentElement.clientWidth > 900) {
     }
   }
   // SCROLL ANIMATIONS FOR HOMEPAGE
-  // $('#right-content-container-home').waypoint(function(direction){
+  // $('#waypoint-1').waypoint(function(direction){
   //   if (direction == 'down'){
-  //     tlOnLoad.reverse();
   //     console.log('scrolling down');
   //   } else {
   //     console.log('scrolling up');
   //   }
-  // },{offset: '20%'});
-  // window.onscroll = function() {myFunction()};
+  // });
+  window.onscroll = function() {myFunction()};
   
-  // function myFunction() {
-  //   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-  //     tl7.play();
-  //   }
-  // }
+  function myFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      tl7.play();
+      tlOnLoadDark.play();
+    } else if(document.body.scrollTop < 10 || document.documentElement.scrollTop < 50){
+      tl7.reverse();
+      tlOnLoadDark.reverse();
+    }
+  }
   
   window.onload = init;
   halkaBox.run("gallery2");

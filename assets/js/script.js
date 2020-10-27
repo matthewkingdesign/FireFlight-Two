@@ -375,22 +375,22 @@ function onComplete() {
       
      } );
 }
-menuDark.addEventListener("mouseenter", function() {
-  tl1aDark.play();
-  tl1Dark.play();
-  tl2Dark.play();
-  tl3Dark.play();
-  tl4Dark.play();
-  tl5Dark.play();
- } );
- menuDark.addEventListener("mouseleave", function() {
-  tl1aDark.reverse();
-  tl1Dark.reverse();
-  tl2Dark.reverse();
-  tl3Dark.reverse();
-  tl4Dark.reverse();
-  tl5Dark.reverse();
- } );
+// menuDark.addEventListener("mouseenter", function() {
+//   tl1aDark.play();
+//   tl1Dark.play();
+//   tl2Dark.play();
+//   tl3Dark.play();
+//   tl4Dark.play();
+//   tl5Dark.play();
+//  } );
+//  menuDark.addEventListener("mouseleave", function() {
+//   tl1aDark.reverse();
+//   tl1Dark.reverse();
+//   tl2Dark.reverse();
+//   tl3Dark.reverse();
+//   tl4Dark.reverse();
+//   tl5Dark.reverse();
+//  } );
 
 // select all the buttons individually
 for (var i = 0; i < buttons.length; i++) {
