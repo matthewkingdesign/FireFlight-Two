@@ -540,9 +540,6 @@ html {
       width: 300px;
     }
   }
-  #left-home {
-    background-color: @light-grey;
-  }
   // .logo-home-loading-screen{
   // 	@media screen and (max-width:800px) {
   // 		width: 300px;
@@ -570,6 +567,7 @@ html {
   // z-index: -1;
   pointer-events: none;
   overflow: hidden;
+  display: block;
 }
 .vimeo-wrapper iframe {
   display: block;
@@ -590,10 +588,18 @@ html {
   overflow: hidden;
 }
 #content-home {
-  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5%;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
   #content-title-home {
     text-align: center;
   }
+}
+.showreel-stills-home-holder {
+  display: block;
+  padding: 0 12.5vw 0 12.5vw;
 }
 .content-home {
   @media screen and (max-width: 800px) {
@@ -882,6 +888,7 @@ p {
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 5% 12.5vw 5% 12.5vw;
+  display: block;
 }
 #content-title-showreel {
   text-align: center;

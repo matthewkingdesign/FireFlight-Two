@@ -7,6 +7,7 @@
     <?php echo $page->metaTags() ?>
     <title><?= $page->title() ?></title>
     <link rel="stylesheet" href="https://use.typekit.net/ogl6oma.css">
+    <link rel="stylesheet/less" type="text/css" href="assets/css/halkaBox.css" />
     <link rel="stylesheet/less" type="text/css" href="assets/css/stylesheet.less" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181030538-1"></script>

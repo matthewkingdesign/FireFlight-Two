@@ -409,11 +409,14 @@ for (var i = 0; i < buttons.length; i++) {
   }
 }
 // SCROLL ANIMATIONS FOR HOMEPAGE
-$('#left-home').waypoint(function(direction){
-  if (direction == 'down'){
-    tlOnLoad.reverse();
-  }
-},{offset: '20%'});
+// $('#right-content-container-home').waypoint(function(direction){
+//   if (direction == 'down'){
+//     tlOnLoad.reverse();
+//     console.log('scrolling down');
+//   } else {
+//     console.log('scrolling up');
+//   }
+// },{offset: '20%'});
 // window.onscroll = function() {myFunction()};
 
 // function myFunction() {
