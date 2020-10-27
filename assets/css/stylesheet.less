@@ -186,12 +186,12 @@ html {
 // #menu-bg-weddings{
 // 	background-color: #012c33;
 // }
-.menu {
-  // display: block;
-}
-.menu-dark {
-  // display: none;
-}
+// .menu {
+//   display: block;
+// }
+// .menu-dark {
+//   display: none;
+// }
 .menu,
 .menu-dark {
   // background: blue;
@@ -404,7 +404,7 @@ html {
   display: block;
   right: 30px;
   top: 30px;
-  position: absolute;
+  position: fixed;
   display: none;
   @media screen and (max-width: 800px) {
     display: block;
@@ -415,7 +415,7 @@ html {
   width: 30px;
   height: 30px;
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   right: 30px;
   top: 30px;
@@ -975,6 +975,109 @@ p {
 
 .cookie_container {
   background-color: @light-grey;
+}
+.phone-contact {
+  display: none;
+}
+.phone {
+  display: none;
+}
+.phone-contact {
+  display: block;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  height: 55px;
+  padding: 10px 0 10px 0;
+  color: @light-grey;
+  font-family: agenda, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  background-color: @dark-orange;
+  z-index: 9999;
+  a {
+    color: @light-grey;
+  }
+}
+@media screen and (max-width: 800px) {
+  #left-home {
+    padding: none;
+  }
+  .showreel-stills-home-holder {
+    padding: 0 0 0 0;
+  }
+  .phone {
+    display: block;
+  }
+  .showreel-vimeo-wrapper iframe {
+    height: 100%;
+    width: 100%;
+  }
+  .vp-center {
+    width: 200px;
+  }
+  .content-title {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    letter-spacing: -2px;
+    margin: 10px 0 10px 0;
+    color: @dark-grey;
+  }
+  .terms-content-title {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em;
+    letter-spacing: -2px;
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .showreel-flex {
+    img {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+      height: 100%;
+    }
+  }
+  .phone-element {
+    display: block;
+
+    .content-copy,
+    .terms-content-copy {
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+      display: block;
+      padding: 10px;
+    }
+  }
+  // #phone-about,
+  // #phone-about img {
+  //   margin-top: 1vh;
+  // }
+  // #phone-inspection {
+  //   margin-top: 100vh;
+  // }
+  // #phone-properties {
+  //   margin-top: 200vh;
+  // }
+  // #phone-weddings {
+  //   margin-top: 300vh;
+  // }
+  // #phone-hire {
+  //   margin-top: 400vh;
+  // }
+  // #phone-terms {
+  //   margin-top: 500vh;
+  // }
 }
 
 /*OTHER STYLES FOR GRID CSS FROM TUTORIAL*/

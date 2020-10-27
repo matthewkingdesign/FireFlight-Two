@@ -363,3 +363,39 @@
     <?php endif ?>
     <h1 class="content-copy-home"><?= $page->text()->kt() ?></h1>
   </div> -->
+
+
+
+        <!--CONTACT PAGE-->
+        <div class="phone-element" id="phone-contact">
+        <?php
+          $contactPage = $site->findPageOrDraft('contact');
+            if($image = $contactPage->image('sunset-cinema-1.2_result.jpg')): ?>
+            <img id="phone-hire-img" class="phone-img" src="<?= $image->url() ?>" alt="">
+        <?php endif ?>
+        <h1 class="content-title"><?= $contactPage->title() ?></h1>
+        <div class="content-copy"><?= $contactPage->text()->kt()?></div>
+      </div>
+
+
+      <!--TERMS PAGE-->
+      <div class="phone-element" id="phone-terms">
+          <?php $termsPage = $site->findPageOrDraft('terms'); ?>
+          <h1 id="planning-title" class="terms-content-title"><?= $termsPage->planning() ?></h1>
+          <div id="planning-copy" class="terms-content-copy"><?= $termsPage->planningText()->kt()?></div>
+          <h1 id="covid-title" class="terms-content-title"><?= $termsPage->covid() ?></h1>
+          <div id="covid-copy" class="terms-content-copy"><?= $termsPage->covidText()->kt()?></div>
+          <h1 id="weather-title" class="terms-content-title"><?= $termsPage->weather() ?></h1>
+          <div id="weather-copy" class="terms-content-copy"><?= $termsPage->weatherText()->kt()?></div>
+          <h1 id="travel-title" class="terms-content-title"><?= $termsPage->travel() ?></h1>
+          <div id="travel-copy" class="terms-content-copy"><?= $termsPage->travelText()->kt()?></div>
+          <h1 id="airspace-title" class="terms-content-title"><?= $termsPage->airspace() ?></h1>
+          <div id="airspace-copy" class="terms-content-copy"><?= $termsPage->airspaceText()->kt()?></div>
+          <h1 id="imageRights-title" class="terms-content-title"><?= $termsPage->imageRights() ?></h1>
+          <div id="imageRights-copy" class="terms-content-copy"><?= $termsPage->imageRightsText()->kt()?></div>
+          <h1 id="guidance-title" class="terms-content-title"><?= $termsPage->guidance() ?></h1>
+          <div id="guidance-copy" class="terms-content-copy"><?= $termsPage->guidanceText()->kt()?></div>
+          <h1 id="payment-title" class="terms-content-title"><?= $termsPage->payment() ?></h1>
+          <div id="payment-copy" class="terms-content-copy"><?= $termsPage->paymentText()->kt()?></div>
+        </div>
+    </div>

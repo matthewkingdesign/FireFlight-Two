@@ -122,7 +122,7 @@
       <div class="open-btn">
           <?php
             $homePage = $site->findPageOrDraft('home');
-              if($image = $homePage->image('open-menu.svg')): ?>
+              if($image = $homePage->image('open-menu-orange.svg')): ?>
                <img id="" class="" src="<?= $image->url() ?>" alt="">
           <?php endif ?>
 

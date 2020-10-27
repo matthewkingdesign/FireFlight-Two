@@ -35,7 +35,7 @@
         <div class="content-phone"><?= $page->phone()->kt() ?></div> -->
 
         <div class="showreel-vimeo-wrapper">
-          <iframe src="https://player.vimeo.com/video/448823024" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          <iframe src="https://player.vimeo.com/video/472574172" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
         <h1 id="showreel-subtitle" class="content-title">Stills</h1>
         <div class = "showreel-stills-home-holder">
@@ -58,4 +58,67 @@
         </div>
       </div>
     </div>  
+    <div class="phone">
+      <!--ABOUT PAGE-->
+      <div class="phone-element" id="phone-about">
+        <?php
+          $aboutPage = $site->findPageOrDraft('about'); ?>
+          <h1 class="content-title"><?= $aboutPage->title() ?></h1>
+          <div class="content-copy"><?= $aboutPage->text()->kt()?></div>
+            <?php if($image = $aboutPage->image('beach_result.jpg')): ?>
+            <img id="phone-about-img" class="phone-img" src="<?= $image->url() ?>" alt="">
+        <?php endif ?>
+      </div>
+      
+      <!--INSPECTION PAGE-->
+      <div class="phone-element" id="phone-inspection">
+        <?php
+          $inspectionPage = $site->findPageOrDraft('inspection'); ?>
+          <h1 class="content-title"><?= $inspectionPage->title() ?></h1>
+          <div class="content-copy"><?= $inspectionPage->text()->kt()?></div>
+          <?php  if($image = $inspectionPage->image('mike-roof-2_result-edit.jpg')): ?>
+            <img id="phone-inspection-img" class="phone-img" src="<?= $image->url() ?>" alt="">
+        <?php endif ?>
+      </div>
+      
+      <!--PROPERTIES PAGE-->
+      <div class="phone-element" id="phone-properties">
+        <?php
+          $propertiesPage = $site->findPageOrDraft('properties'); ?>
+          <h1 class="content-title"><?= $propertiesPage->title() ?></h1>
+          <div class="content-copy"><?= $propertiesPage->text()->kt()?></div>
+          <?php if($image = $propertiesPage->image('estate-agents-new.jpg')): ?>
+            <img id="phone-properties-img" class="phone-img" src="<?= $image->url() ?>" alt="">
+        <?php endif ?>
+
+      </div>
+     
+       <!--WEDDINGS PAGE-->
+       <div class="phone-element" id="phone-weddings">
+        <?php
+          $weddingsPage = $site->findPageOrDraft('weddings'); ?>
+          <h1 class="content-title"><?= $weddingsPage->title() ?></h1>
+          <div class="content-copy"><?= $weddingsPage->text()->kt()?></div>
+          <?php  if($image = $weddingsPage->image('ripples_result.jpg')): ?>
+            <img id="phone-weddings-img" class="phone-img" src="<?= $image->url() ?>" alt="">
+        <?php endif ?>
+
+      </div>
+
+      <!--HIRE PAGE-->
+      <div class="phone-element" id="phone-hire">
+        <?php
+          $hirePage = $site->findPageOrDraft('bespoke');
+            if($image = $hirePage->image('bespoke-web-image_result.jpg')): ?>
+            <h1 class="content-title"><?= $hirePage->title() ?></h1>
+            <div class="content-copy"><?= $hirePage->text()->kt()?></div>
+            <img id="phone-hire-img" class="phone-img" src="<?= $image->url() ?>" alt="">
+        <?php endif ?>
+        
+      </div>
+      <div class="phone-contact">
+        <div class="phone-number">+44 7735 886211</div>
+        <a href = "mailto: support@fireflightdrones.com"><div class="phone-email">support@fireflightdrones.com</div></a>
+      </div>
+    </div>
 <?php snippet('footer-home') ?>
