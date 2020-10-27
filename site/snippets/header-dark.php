@@ -59,13 +59,25 @@
         <div class="socials">
           <?php
           $contactPage = $site->findPageOrDraft('contact');
-            if($image = $contactPage->image('facebook-fill.svg')): ?>
-            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
-          <?php endif ?>
-          <?php
             if($image = $contactPage->image('insta-fill.svg')): ?>
             <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
 
         </div>
+        <div class="close-btn">
+          <?php
+            $homePage = $site->findPageOrDraft('home');
+              if($image = $homePage->image('close-menu.svg')): ?>
+               <img id="" class="" src="<?= $image->url() ?>" alt="">
+          <?php endif ?>
+
+        </div>
       </nav>
+      <div class="open-btn">
+          <?php
+            $homePage = $site->findPageOrDraft('home');
+              if($image = $homePage->image('open-menu-orange.svg')): ?>
+               <img id="" class="" src="<?= $image->url() ?>" alt="">
+          <?php endif ?>
+
+      </div>

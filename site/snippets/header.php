@@ -58,15 +58,12 @@
         <div class="socials">
           <?php
           $contactPage = $site->findPageOrDraft('contact');
-            if($image = $contactPage->image('facebook-fill-light.svg')): ?>
-            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
-          <?php endif ?>
-          <?php
             if($image = $contactPage->image('insta-fill-light.svg')): ?>
             <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
 
         </div>
+        
         <div class="close-btn">
           <?php
             $homePage = $site->findPageOrDraft('home');
@@ -77,7 +74,6 @@
         </div>
 
 
-        
       </nav>
 
 
@@ -90,7 +86,7 @@
 
         </div>
 
-      
+        
 
       
       

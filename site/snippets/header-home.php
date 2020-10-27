@@ -59,10 +59,6 @@
         <div class="socials">
           <?php
           $contactPage = $site->findPageOrDraft('contact');
-            if($image = $contactPage->image('facebook-fill-light.svg')): ?>
-            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
-          <?php endif ?>
-          <?php
             if($image = $contactPage->image('insta-fill-light.svg')): ?>
             <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
@@ -107,15 +103,16 @@
         <div class="socials-dark">
           <?php
           $contactPage = $site->findPageOrDraft('contact');
-            if($image = $contactPage->image('facebook-fill.svg')): ?>
-            <a href="<?= $contactPage->facebookUrl() ?>"> <img class="social-media-icon-dark" src="<?= $image->url() ?>" alt=""></a>
-          <?php endif ?>
-          <?php
             if($image = $contactPage->image('insta-fill.svg')): ?>
             <a href="<?= $contactPage->instaUrl() ?>"> <img class="social-media-icon-dark" src="<?= $image->url() ?>" alt=""></a>
           <?php endif ?>
 
         </div>
+        <div class="phone-contact">
+        <div class="phone-number">+44 7735 886211</div>
+        <a href = "mailto: support@fireflightdrones.com"><div class="phone-email">support@fireflightdrones.com</div></a>
+      </div>
+    </div>
       </nav>
 
 
@@ -126,7 +123,7 @@
                <img id="" class="" src="<?= $image->url() ?>" alt="">
           <?php endif ?>
 
-        </div>
+      </div>
 
       
 

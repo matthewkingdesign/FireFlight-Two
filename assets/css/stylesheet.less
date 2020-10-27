@@ -374,7 +374,7 @@ html {
 // }
 .socials,
 .socials-dark {
-  height: 50px;
+  height: 20px;
   bottom: 40px;
   left: 0;
   position: absolute;
@@ -402,8 +402,8 @@ html {
   width: 30px;
   height: 30px;
   display: block;
-  right: 30px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
   position: fixed;
   display: none;
   @media screen and (max-width: 800px) {
@@ -417,8 +417,8 @@ html {
   display: none;
   position: fixed;
   z-index: 999;
-  right: 30px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
   @media screen and (max-width: 800px) {
     display: block;
   }
@@ -705,7 +705,7 @@ html {
   width: 100vw;
   display: block;
   height: 100%;
-  overflow: scroll;
+  overflow: hidden;
   .background-img {
     min-height: 100%;
     min-width: 1024px;
@@ -830,11 +830,15 @@ p {
     height: 85%;
     overflow: scroll;
     color: @light-grey;
+    background-color: @dark-orange;
   }
   .terms-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em;
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   #content-titleterms-conditions {
     text-align: center;
@@ -976,35 +980,60 @@ p {
 .cookie_container {
   background-color: @light-grey;
 }
-.phone-contact {
+.phone-contact,
+.phone-contact-home {
   display: none;
 }
 .phone {
   display: none;
 }
-.phone-contact {
-  display: block;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  position: fixed;
-  height: 55px;
-  padding: 10px 0 10px 0;
-  color: @light-grey;
-  font-family: agenda, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1em;
-  text-align: center;
+#left-content-terms {
   background-color: @dark-orange;
-  z-index: 9999;
-  a {
-    color: @light-grey;
-  }
 }
+#content-titleterms {
+  color: @light-grey;
+}
+
 @media screen and (max-width: 800px) {
   #left-home {
     padding: none;
+  }
+  .phone-contact-home {
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    height: 55px;
+    padding: 10px 0 10px 0;
+    color: @light-grey;
+    font-family: agenda, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+    text-align: center;
+    background-color: @dark-orange;
+    z-index: 9999;
+  }
+  .phone-contact {
+    display: none;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    height: 55px;
+    padding: 10px 0 10px 0;
+    color: @light-grey;
+    font-family: agenda, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+    text-align: center;
+    background-color: @dark-orange;
+    z-index: 9999;
+    a {
+      color: @light-grey;
+    }
   }
   .showreel-stills-home-holder {
     padding: 0 0 0 0;
@@ -1019,13 +1048,16 @@ p {
   .vp-center {
     width: 200px;
   }
-  .content-title {
+  .phone-content-title {
     text-align: center;
     width: 100%;
     font-size: 2em;
     letter-spacing: -2px;
     margin: 10px 0 10px 0;
     color: @dark-grey;
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
   }
   .terms-content-title {
     font-family: sofia-pro, sans-serif;
@@ -1035,6 +1067,10 @@ p {
     letter-spacing: -2px;
     position: relative;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  #content-titleterms {
+    font-size: 2.5em;
     text-align: center;
   }
   .showreel-flex {
@@ -1059,25 +1095,6 @@ p {
       padding: 10px;
     }
   }
-  // #phone-about,
-  // #phone-about img {
-  //   margin-top: 1vh;
-  // }
-  // #phone-inspection {
-  //   margin-top: 100vh;
-  // }
-  // #phone-properties {
-  //   margin-top: 200vh;
-  // }
-  // #phone-weddings {
-  //   margin-top: 300vh;
-  // }
-  // #phone-hire {
-  //   margin-top: 400vh;
-  // }
-  // #phone-terms {
-  //   margin-top: 500vh;
-  // }
 }
 
 /*OTHER STYLES FOR GRID CSS FROM TUTORIAL*/

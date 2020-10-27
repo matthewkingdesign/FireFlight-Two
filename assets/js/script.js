@@ -425,162 +425,164 @@ for (var i = 0; i < buttons.length; i++) {
 //   }
 // }
 window.onload = init;
+
+} else{
+// halkaBox.options({
+//   hideButtons: true,       // hide buttons on touch devices (true || false)
+//   animation: "slide",      // animation type on next/prev ("slide" || "fade")
+//   theme: "light",          // lightbox overlay theme ("light" || "dark")
+//   preload: 2,              // number of images to preload
+//   swipeDownToClose: false, // swipe down to close (true || false)
+//   swipeUpToClose: false,   // swipe up to close (true || false)
+//   nextPrevOnWheel: true,   // goto next/prev image on wheel (true || false)
+//   isZoomable: true         // ability to zoom image (true || false)
+// });
+// halkaBox.run("gallery1");
+// Homepage
+gsap.from('.logo-home',{
+  opacity: 0,
+  duration: 1,
+  ease: "circ.in",
+  delay: 6
+});
+gsap.from('.content-copy-home',{
+  opacity: 0,
+  duration: 1,
+  ease: "circ.in",
+  delay: 6.5
+});
+// gsap.to('.menu',{
+//   width:66,
+//   duration: 0.5
+// });
+
+//LOADING PAGE
+gsap.from('.loading-screen-content',{
+  opacity: 0,
+  duration: 1,
+  ease: "circ.in"
+});
+gsap.to('.loading-screen',{
+  display:'none',
+  opacity:0,
+  duration: 1,
+  delay: 5
+});
+
+
+// create main timeline
+var masterTl = new TimelineMax({paused:true, onComplete:onComplete});
+
+// make this all happen on page load
+function init(){
+masterTl.play();
 }
-// } else{
-// // halkaBox.options({
-// //   hideButtons: true,       // hide buttons on touch devices (true || false)
-// //   animation: "slide",      // animation type on next/prev ("slide" || "fade")
-// //   theme: "light",          // lightbox overlay theme ("light" || "dark")
-// //   preload: 2,              // number of images to preload
-// //   swipeDownToClose: false, // swipe down to close (true || false)
-// //   swipeUpToClose: false,   // swipe up to close (true || false)
-// //   nextPrevOnWheel: true,   // goto next/prev image on wheel (true || false)
-// //   isZoomable: true         // ability to zoom image (true || false)
-// // });
-// // halkaBox.run("gallery1");
-// // Homepage
-// gsap.from('.logo-home',{
-//   opacity: 0,
-//   duration: 1,
-//   ease: "circ.in",
-//   delay: 6
-// });
-// gsap.from('.content-copy-home',{
-//   opacity: 0,
-//   duration: 1,
-//   ease: "circ.in",
-//   delay: 6.5
-// });
-// // gsap.to('.menu',{
-// //   width:66,
-// //   duration: 0.5
-// // });
+// Test play reverse
+var select = document.querySelector.bind(document);
+// This function will return a node-list of elements
+// It's not used in this example, but I included it in case
+// you were wondering how to select more than one element
+var selectAll = document.querySelectorAll.bind(document);
+// Select our elements
+var buttons = document.getElementsByClassName('menu-link');
+var pricePs = document.getElementsByClassName('content-prices')[0].children;
+var copyPs = document.getElementsByClassName('content-copy')[0].children;
+var emailPs = document.getElementsByClassName('content-email')[0].children;
+var phonePs = document.getElementsByClassName('content-phone')[0].children;
+var contactCta = select(".content-cta");
+var menu = select(".menu");
+var menuBg = select(".menu-bg");
+var menuIcons = selectAll(".menu-icon");
+var menuItem = selectAll(".menu-item");
+var menuLogo = select("#logo-text");
+var socials = selectAll(".social-media-icon");
+// on load timeline
 
-// //LOADING PAGE
-// gsap.from('.loading-screen-content',{
-//   opacity: 0,
-//   duration: 1,
-//   ease: "circ.in"
-// });
-// gsap.to('.loading-screen',{
-//   display:'none',
-//   opacity:0,
-//   duration: 1,
-//   delay: 5
-// });
+	var tlMenuLoad = new TimelineLite()
+// Menu bar
 
+  .from(menuIcons,{
+    opacity: 0,
+    duration: 0.5,
+    x: -50,
+    stagger: 0.1,
+    ease: "power4.out",
+    delay: 2.5
+  }, "-=2")
+  .from(socials, {
+    duration: 0.7,
+    opacity: 0,
+    x: -50,
+    stagger: 0.1
+  }, "-=1")
+  // .to(menu,  {
+  //   duration:0.5,
+  //   width: 66,
+  //   ease: "power4.out",
+  //   delay: 2
+  // }, "-=2");
 
-// // create main timeline
-// var masterTl = new TimelineMax({paused:true, onComplete:onComplete});
+var tlOnLoad = new TimelineLite()
+  .to('.background-img', {
+    opacity: 1,
+    duration: 0.3,
+    delay: 0.3
+  })
+  .from('.content-right',{
+    duration: 0.3,
+    x: 600,
+    delay: 0.5
+  }, "-=1")
+  .from('.content-title', {
+    duration: 0.3,
+    opacity: 0,
+    x: 600,
+    delay: 0.5
+  }, "-=1")
+  .from(copyPs, {
+    duration: 0.3,
+    opacity: 0,
+    x: 600,
+    delay: 0.6
+  }, "-=1")
+  .from(pricePs, {
+    duration: 0.3,
+    opacity: 0,
+    x: 600,
+    delay: 0.8
+  }, "-=1")
+  .from(contactCta, {
+    duration: 0.3,
+    opacity: 0,
+    x: 600,
+    delay: 0.9
+  }, "-=1")
+  .from(emailPs, {
+    duration: 0.3,
+    opacity: 0,
+    x: 600,
+    delay: 0.9
+  }, "-=1")
+  .from(phonePs, {
+    duration: 0.3,
+    opacity: 0,
+    x: 600,
+    delay: 1
+  }, "-=1");
 
-// // make this all happen on page load
-// function init(){
-// masterTl.play();
-// }
-// // Test play reverse
-// var select = document.querySelector.bind(document);
-// // This function will return a node-list of elements
-// // It's not used in this example, but I included it in case
-// // you were wondering how to select more than one element
-// var selectAll = document.querySelectorAll.bind(document);
-// // Select our elements
-// var buttons = document.getElementsByClassName('menu-link');
-// var pricePs = document.getElementsByClassName('content-prices')[0].children;
-// var copyPs = document.getElementsByClassName('content-copy')[0].children;
-// var emailPs = document.getElementsByClassName('content-email')[0].children;
-// var phonePs = document.getElementsByClassName('content-phone')[0].children;
-// var contactCta = select(".content-cta");
-// var menu = select(".menu");
-// var menuBg = select(".menu-bg");
-// var menuIcons = selectAll(".menu-icon");
-// var menuItem = selectAll(".menu-item");
-// var menuLogo = select("#logo-text");
-// var socials = selectAll(".social-media-icon");
-// // on load timeline
-
-// 	var tlMenuLoad = new TimelineLite()
-// // Menu bar
-
-//   .from(menuIcons,{
-//     opacity: 0,
-//     duration: 0.5,
-//     x: -50,
-//     stagger: 0.1,
-//     ease: "power4.out",
-//     delay: 2.5
-//   }, "-=2")
-//   .from(socials, {
-//     duration: 0.7,
-//     opacity: 0,
-//     x: -50,
-//     stagger: 0.1
-//   }, "-=1")
-//   // .to(menu,  {
-//   //   duration:0.5,
-//   //   width: 66,
-//   //   ease: "power4.out",
-//   //   delay: 2
-//   // }, "-=2");
-
-// var tlOnLoad = new TimelineLite()
-//   .to('.background-img', {
-//     opacity: 1,
-//     duration: 0.3,
-//     delay: 0.3
-//   })
-//   .from('.content-right',{
-//     duration: 0.3,
-//     x: 600,
-//     delay: 0.5
-//   }, "-=1")
-//   .from('.content-title', {
-//     duration: 0.3,
-//     opacity: 0,
-//     x: 600,
-//     delay: 0.5
-//   }, "-=1")
-//   .from(copyPs, {
-//     duration: 0.3,
-//     opacity: 0,
-//     x: 600,
-//     delay: 0.6
-//   }, "-=1")
-//   .from(pricePs, {
-//     duration: 0.3,
-//     opacity: 0,
-//     x: 600,
-//     delay: 0.8
-//   }, "-=1")
-//   .from(contactCta, {
-//     duration: 0.3,
-//     opacity: 0,
-//     x: 600,
-//     delay: 0.9
-//   }, "-=1")
-//   .from(emailPs, {
-//     duration: 0.3,
-//     opacity: 0,
-//     x: 600,
-//     delay: 0.9
-//   }, "-=1")
-//   .from(phonePs, {
-//     duration: 0.3,
-//     opacity: 0,
-//     x: 600,
-//     delay: 1
-//   }, "-=1");
-
-// document.querySelector('.close-btn').addEventListener('click', function(){
-//   console.log('you clicke me');
-//   document.querySelector('.menu').style.display = 'none';
-//   document.querySelector('.open-btn').style.display = 'block';
-// });
-// document.querySelector('.open-btn').addEventListener('click', function(){
-//   console.log('you clicke me');
-//   document.querySelector('.open-btn').style.display = 'none';
-//   document.querySelector('.menu').style.display = 'block';
-// });
-// } // end of IF 
+document.querySelector('.close-btn').addEventListener('click', function(){
+  console.log('you clicke me');
+  document.querySelector('.menu').style.display = 'none';
+  document.querySelector('.open-btn').style.display = 'block';
+  document.querySelector('.phone-contact').style.display = 'none'
+});
+document.querySelector('.open-btn').addEventListener('click', function(){
+  console.log('you clicke me');
+  document.querySelector('.open-btn').style.display = 'none';
+  document.querySelector('.menu').style.display = 'block';
+  document.querySelector('.phone-contact').style.display = 'block'
+});
+} // end of IF 
 
 
 
