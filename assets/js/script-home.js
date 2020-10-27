@@ -425,6 +425,11 @@ if (document.documentElement.clientWidth > 900) {
   //     console.log('scrolling up');
   //   }
   // });
+
+  
+  window.onload = init;
+  halkaBox.run("gallery2");
+  }
   window.onscroll = function() {myFunction()};
   
   function myFunction() {
@@ -435,10 +440,6 @@ if (document.documentElement.clientWidth > 900) {
       tl7.reverse();
       tlOnLoadDark.reverse();
     }
-  }
-  
-  window.onload = init;
-  halkaBox.run("gallery2");
   }
   // } else{
   // // halkaBox.options({
