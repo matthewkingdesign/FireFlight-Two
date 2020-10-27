@@ -173,7 +173,7 @@ if (document.documentElement.clientWidth > 900) {
     }, "-=2")
   var tlHideDarkMenu = new TimelineLite()
     .to(menuDark, {
-      x: -100
+      x: -200
     })
   var tlOnLoadDark = new TimelineLite({paused: true})
     .to(menuDark,{
